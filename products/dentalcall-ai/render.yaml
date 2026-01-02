@@ -1,5 +1,5 @@
 # Render Blueprint for DentalCall AI
-# Deploy with: render blueprint apply
+# Auto-deploy enabled - deploys on every push
 
 services:
   - type: web
@@ -7,6 +7,7 @@ services:
     runtime: node
     plan: starter
     region: oregon
+    rootDir: products/dentalcall-ai
     buildCommand: npm install && npm run build
     startCommand: npm run start
     healthCheckPath: /api/health
@@ -16,12 +17,14 @@ services:
         value: production
       - key: NEXT_PUBLIC_APP_URL
         value: https://dentalcall-ai.onrender.com
+      # Supabase
       - key: NEXT_PUBLIC_SUPABASE_URL
-        sync: false
+        value: https://fataxuuxjwibugjxekwm.supabase.co
       - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
         sync: false
       - key: SUPABASE_SERVICE_ROLE_KEY
         sync: false
+      # Stripe
       - key: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
         sync: false
       - key: STRIPE_SECRET_KEY
@@ -34,19 +37,23 @@ services:
         sync: false
       - key: STRIPE_BUSINESS_PRICE_ID
         sync: false
+      # Vapi
       - key: VAPI_API_KEY
         sync: false
       - key: VAPI_ASSISTANT_ID
         sync: false
+      # OpenAI
       - key: OPENAI_API_KEY
         sync: false
+      # Twilio
       - key: TWILIO_ACCOUNT_SID
         sync: false
       - key: TWILIO_AUTH_TOKEN
         sync: false
       - key: TWILIO_PHONE_NUMBER
         sync: false
-      - key: NEXT_PUBLIC_POSTHOG_KEY
+      # Google OAuth
+      - key: GOOGLE_CLIENT_ID
         sync: false
-      - key: NEXT_PUBLIC_POSTHOG_HOST
-        value: https://app.posthog.com
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
