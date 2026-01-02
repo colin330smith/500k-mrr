@@ -1,0 +1,180 @@
+{
+  "scan_id": "SCAN-20260102-001",
+  "scan_timestamp": "2026-01-02T12:00:00Z",
+  "opportunities_analyzed": 4,
+  "build_immediately": 1,
+  "build_queue": 2,
+  "backlog": 1,
+
+  "opportunities": [
+    {
+      "opportunity_id": "OPP-20260102-001",
+      "problem_statement": "Dental practices miss 32% of incoming calls, losing $850-$1,300 per missed call. Staff shortages and peak hours cause voicemails that 86% of new patients never leave.",
+      "target_vertical": "dental",
+      "target_market": "Dental practices in US (200,000+ practices)",
+      "evidence": [
+        {
+          "source": "industry_research",
+          "signal": "32% of dental calls go unanswered during business hours",
+          "url": "https://www.getreach.co/blog/32-of-dental-calls-go-unanswered-how-to-fix-it"
+        },
+        {
+          "source": "industry_research",
+          "signal": "Only 14% of new patients leave voicemails",
+          "url": "https://www.dentalintel.com/blog-posts/missed-phone-calls-how-they-hurt-your-dental-practice"
+        },
+        {
+          "source": "case_study",
+          "signal": "One clinic reduced missed calls by 93% with AI receptionist",
+          "url": "https://medium.com/@theo/how-one-dental-clinic-reduced-missed-calls-by-93"
+        },
+        {
+          "source": "market_data",
+          "signal": "60% of dental offices report staff shortages as reason for missed calls",
+          "url": "https://www.dentalmanagers.com/blog/dental-staffing-crisis"
+        }
+      ],
+      "arpu_estimate": 599,
+      "score_breakdown": {
+        "arpu_potential": {
+          "score": 25,
+          "max": 30,
+          "rationale": "Competitors price $49-$4,000/mo. Sweet spot at $299-999 for SMB dental. $599 Professional tier captures most value."
+        },
+        "validation": {
+          "score": 20,
+          "max": 20,
+          "rationale": "32% missed calls is industry-validated. $850+ cost per missed call. 50,000+ businesses adopted AI answering in 2024-2025."
+        },
+        "build_speed": {
+          "score": 15,
+          "max": 15,
+          "rationale": "Vapi.ai handles voice AI. Next.js + Supabase for dashboard. 3-5 day build with existing templates."
+        },
+        "competition": {
+          "score": 12,
+          "max": 15,
+          "rationale": "Fragmented market. Arini, Viva, Dentina exist but many charge per-minute or enterprise pricing. Room for $599 fixed-price disruptor."
+        },
+        "strategic_fit": {
+          "score": 20,
+          "max": 20,
+          "rationale": "Path A Voice AI - highest margin, $599 ARPU, sticky (phone number lock-in), expandable to medical/legal."
+        }
+      },
+      "total_score": 92,
+      "recommended_path": "A",
+      "blue_ocean_signals": [
+        "Per-minute pricing creates bill shock - fixed price wins",
+        "Many solutions are enterprise-only - SMB underserved",
+        "Dental-specific vocabulary and workflows not addressed",
+        "Integration complexity deters smaller practices",
+        "24/7 coverage gap during lunch/evenings/weekends"
+      ],
+      "routing": "BUILD_IMMEDIATELY",
+      "next_action": "Spawn ARCHITECT agent for dental-voice-ai MVP"
+    },
+    {
+      "opportunity_id": "OPP-20260102-002",
+      "problem_statement": "SOC 2 compliance for AI startups costs $50K-$150K and takes 3-6 months. 66% of B2B buyers require it. AI-specific compliance concerns (model training, data leakage) create new complexity.",
+      "target_vertical": "ai_startups",
+      "target_market": "AI/ML startups Seed-Series B (10,000+ companies)",
+      "evidence": [
+        {
+          "source": "industry_research",
+          "signal": "Traditional SOC 2 costs $50K-$100K in consulting fees",
+          "url": "https://scytale.ai/center/soc-2/how-much-does-soc-2-compliance-cost/"
+        },
+        {
+          "source": "market_data",
+          "signal": "66% of B2B buyers require SOC 2 before considering a vendor",
+          "url": "https://www.brightdefense.com/resources/soc-2-for-ai-startups/"
+        },
+        {
+          "source": "funding_news",
+          "signal": "Comp AI raised $2.6M pre-seed to disrupt SOC 2 market",
+          "url": "https://techstartups.com/2025/08/01/comp-ai-secures-2-6m-pre-seed"
+        }
+      ],
+      "arpu_estimate": 1499,
+      "score_breakdown": {
+        "arpu_potential": {"score": 30, "max": 30},
+        "validation": {"score": 18, "max": 20},
+        "build_speed": {"score": 8, "max": 15},
+        "competition": {"score": 10, "max": 15},
+        "strategic_fit": {"score": 20, "max": 20}
+      },
+      "total_score": 86,
+      "recommended_path": "B",
+      "routing": "BUILD_QUEUE",
+      "next_action": "Queue for build after dental-voice-ai ships"
+    },
+    {
+      "opportunity_id": "OPP-20260102-003",
+      "problem_statement": "Real estate agents miss 80% of leads due to delayed response. First responder wins 78% of deals. 37% of leads remain uncontacted.",
+      "target_vertical": "real_estate",
+      "target_market": "Real estate agents in US (1.5M+ agents)",
+      "evidence": [
+        {
+          "source": "industry_research",
+          "signal": "80% of leads go cold due to delayed responses",
+          "url": "https://convin.ai/blog/ai-real-estate-lead-follow-up"
+        },
+        {
+          "source": "industry_research",
+          "signal": "First agent to respond wins 78% of leads",
+          "url": "https://www.luxurypresence.com/blogs/real-estate-agents-guide-to-lead-follow-up/"
+        }
+      ],
+      "arpu_estimate": 299,
+      "score_breakdown": {
+        "arpu_potential": {"score": 18, "max": 30},
+        "validation": {"score": 18, "max": 20},
+        "build_speed": {"score": 12, "max": 15},
+        "competition": {"score": 8, "max": 15},
+        "strategic_fit": {"score": 15, "max": 20}
+      },
+      "total_score": 71,
+      "recommended_path": "A",
+      "routing": "BUILD_QUEUE",
+      "next_action": "Consider after higher ARPU opportunities"
+    },
+    {
+      "opportunity_id": "OPP-20260102-004",
+      "problem_statement": "Medical practices face same missed call problem as dental but with HIPAA complexity.",
+      "target_vertical": "medical",
+      "target_market": "Medical practices (varies by specialty)",
+      "arpu_estimate": 799,
+      "score_breakdown": {
+        "arpu_potential": {"score": 28, "max": 30},
+        "validation": {"score": 15, "max": 20},
+        "build_speed": {"score": 8, "max": 15},
+        "competition": {"score": 10, "max": 15},
+        "strategic_fit": {"score": 18, "max": 20}
+      },
+      "total_score": 79,
+      "recommended_path": "A",
+      "routing": "BUILD_QUEUE",
+      "next_action": "Expand dental-voice-ai to medical after validation"
+    }
+  ],
+
+  "selected_for_build": {
+    "opportunity_id": "OPP-20260102-001",
+    "product_name": "DentalCall AI",
+    "tagline": "Never Miss Another Patient Call",
+    "problem": "Dental practices miss 32% of calls, losing $850+ per missed opportunity",
+    "solution": "AI receptionist that answers every call 24/7, books appointments, and integrates with your schedule",
+    "total_score": 92,
+    "arpu": 599,
+    "path": "A",
+    "build_time_estimate": "3-5 days",
+    "tech_stack": ["Next.js 14", "Supabase", "Vapi.ai", "Stripe", "PostHog"],
+    "pricing_tiers": [
+      {"name": "Starter", "price": 299, "minutes": 500},
+      {"name": "Professional", "price": 599, "minutes": 2000, "default": true},
+      {"name": "Business", "price": 999, "minutes": 5000}
+    ],
+    "roi_pitch": "At $200/appointment, just 3 additional bookings pay for Professional plan. Most practices see 15-30 new appointments/month."
+  }
+}
