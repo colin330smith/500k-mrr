@@ -39,7 +39,7 @@ See it in action: https://local-lift.onrender.com
 Best,
 Alex Chen
 DentalCall AI
-972-845-8338`;
+650-201-5786`;
 
 async function submitToContactForm(practice) {
   // Try common contact form endpoints
@@ -64,7 +64,7 @@ async function submitToContactForm(practice) {
         const formData = new URLSearchParams({
           name: 'Alex Chen',
           email: 'alex@dentalcall.ai',
-          phone: '972-845-8338',
+          phone: '650-201-5786',
           message: MESSAGE(practice.name),
           _subject: `Partnership opportunity for ${practice.name}`
         }).toString();

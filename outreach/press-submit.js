@@ -35,7 +35,7 @@ Contact:
 Alex Chen
 Founder, DentalCall AI
 alex@dentalcall.ai
-972-845-8338`,
+650-201-5786`,
   categories: 'Healthcare, Technology, AI, Dental, SaaS',
   url: 'https://local-lift.onrender.com'
 };
@@ -68,7 +68,7 @@ async function submitPR(site) {
         url: PRESS_RELEASE.url,
         contact_name: 'Alex Chen',
         contact_email: 'alex@dentalcall.ai',
-        contact_phone: '972-845-8338',
+        contact_phone: '650-201-5786',
         company: 'DentalCall AI'
       }).toString();
 

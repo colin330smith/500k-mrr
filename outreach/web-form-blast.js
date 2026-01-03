@@ -18,7 +18,7 @@ const CONTACT_FORMS = [
 const MESSAGE_TEMPLATE = (practiceName) => ({
   name: 'Alex Chen',
   email: 'alex@dentalcall.ai',
-  phone: '972-845-8338',
+  phone: '650-201-5786',
   subject: `Partnership opportunity for ${practiceName}`,
   message: `Hi,
 
@@ -38,7 +38,7 @@ You can see it in action here: https://local-lift.onrender.com
 Best,
 Alex Chen
 Founder, DentalCall AI
-972-845-8338`
+650-201-5786`
 });
 
 // Alternative: Use public directory listings to find contact forms

@@ -63,7 +63,7 @@ See it live: https://local-lift.onrender.com
 Best,
 Alex Chen
 DentalCall AI
-972-845-8338`;
+650-201-5786`;
 
 async function tryContactForm(domain) {
   const endpoints = [
@@ -78,7 +78,7 @@ async function tryContactForm(domain) {
       const check = execSync(`curl -s -o /dev/null -w "%{http_code}" --max-time 3 "${url}" 2>/dev/null`, { encoding: 'utf8' });
 
       if (check.trim() === '200') {
-        const formData = `name=Alex%20Chen&email=alex%40dentalcall.ai&phone=972-845-8338&message=${encodeURIComponent(MESSAGE(domain))}&_subject=${encodeURIComponent('Partnership opportunity')}`;
+        const formData = `name=Alex%20Chen&email=alex%40dentalcall.ai&phone=650-201-5786&message=${encodeURIComponent(MESSAGE(domain))}&_subject=${encodeURIComponent('Partnership opportunity')}`;
 
         try {
           execSync(`curl -s -X POST "${url}" -d "${formData}" --max-time 5 2>/dev/null`, { encoding: 'utf8' });

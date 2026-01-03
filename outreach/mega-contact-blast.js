@@ -45,7 +45,7 @@ https://local-lift.onrender.com
 
 Alex Chen
 DentalCall AI
-972-845-8338`;
+650-201-5786`;
 
 async function tryContact(domain) {
   const urls = [
@@ -58,7 +58,7 @@ async function tryContact(domain) {
     try {
       const check = execSync(`curl -s -o /dev/null -w "%{http_code}" --connect-timeout 2 --max-time 3 "${url}" 2>/dev/null`, { encoding: 'utf8' });
       if (check.trim() === '200') {
-        const formData = `name=Alex%20Chen&email=alex%40dentalcall.ai&phone=972-845-8338&message=${encodeURIComponent(MESSAGE)}`;
+        const formData = `name=Alex%20Chen&email=alex%40dentalcall.ai&phone=650-201-5786&message=${encodeURIComponent(MESSAGE)}`;
         execSync(`curl -s -X POST "${url}" -d "${formData}" --max-time 3 2>/dev/null`, { encoding: 'utf8' });
         return { ok: true };
       }
