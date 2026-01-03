@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Missed Call Revenue Calculator for Dental Practices</title>
+    <meta name="description" content="Calculate how much revenue your dental practice is losing to missed calls. Free calculator tool - see your results instantly.">
+    <meta property="og:title" content="Free Missed Call Revenue Calculator for Dental Practices">
+    <meta property="og:description" content="Discover how much revenue your practice is losing to missed patient calls. Free instant calculator.">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+
+        .widget { background: white; border-radius: 24px; padding: 50px; max-width: 500px; width: 100%; box-shadow: 0 25px 80px rgba(0,0,0,0.3); }
+        .widget h1 { font-size: 1.8rem; color: #1e293b; margin-bottom: 10px; text-align: center; }
+        .widget .subtitle { color: #64748b; text-align: center; margin-bottom: 35px; }
+
+        .input-group { margin-bottom: 25px; }
+        .input-group label { display: block; font-weight: 600; color: #1e293b; margin-bottom: 8px; }
+        .input-group .helper { font-size: 0.85rem; color: #94a3b8; margin-bottom: 8px; }
+        .input-row { display: flex; align-items: center; gap: 10px; }
+        .input-row span { font-size: 1.2rem; color: #64748b; }
+        .input-group input { flex: 1; padding: 16px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 1.2rem; text-align: center; font-family: inherit; transition: border-color 0.2s; }
+        .input-group input:focus { outline: none; border-color: #667eea; }
+
+        .slider-container { margin: 30px 0; }
+        .slider-container label { display: block; font-weight: 600; color: #1e293b; margin-bottom: 15px; }
+        .slider-value { text-align: center; font-size: 2rem; font-weight: 800; color: #667eea; margin-bottom: 10px; }
+        input[type="range"] { width: 100%; height: 8px; border-radius: 4px; background: #e2e8f0; appearance: none; cursor: pointer; }
+        input[type="range"]::-webkit-slider-thumb { appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #667eea; cursor: pointer; }
+
+        .results { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; padding: 35px; border-radius: 16px; text-align: center; margin: 30px 0; }
+        .results h2 { font-size: 1rem; opacity: 0.9; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+        .results .amount { font-size: 3.5rem; font-weight: 800; }
+        .results .per-year { font-size: 1.2rem; opacity: 0.9; }
+        .results .breakdown { font-size: 0.95rem; opacity: 0.85; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); }
+
+        .solution { background: #f0fdf4; border: 2px solid #10b981; padding: 25px; border-radius: 16px; text-align: center; margin-bottom: 25px; }
+        .solution h3 { color: #059669; font-size: 1.1rem; margin-bottom: 8px; }
+        .solution .recover { font-size: 2rem; font-weight: 800; color: #10b981; }
+        .solution p { color: #047857; font-size: 0.9rem; margin-top: 5px; }
+
+        .cta-btn { display: block; width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 18px; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 700; cursor: pointer; text-decoration: none; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4); }
+
+        .share { text-align: center; margin-top: 25px; }
+        .share p { color: #64748b; font-size: 0.9rem; margin-bottom: 10px; }
+        .share-btns { display: flex; justify-content: center; gap: 10px; }
+        .share-btn { padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .share-btn.twitter { background: #1da1f2; color: white; }
+        .share-btn.linkedin { background: #0077b5; color: white; }
+        .share-btn.copy { background: #e2e8f0; color: #475569; cursor: pointer; border: none; font-family: inherit; }
+
+        .branding { text-align: center; margin-top: 25px; color: #94a3b8; font-size: 0.85rem; }
+        .branding a { color: #667eea; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <div class="widget">
+        <h1>Missed Call Revenue Calculator</h1>
+        <p class="subtitle">How much is your dental practice losing?</p>
+
+        <div class="input-group">
+            <label>Calls per week</label>
+            <p class="helper">How many patient calls does your practice receive?</p>
+            <div class="input-row">
+                <input type="number" id="calls" value="50" oninput="calculate()">
+                <span>calls/week</span>
+            </div>
+        </div>
+
+        <div class="slider-container">
+            <label>Estimated miss rate</label>
+            <div class="slider-value"><span id="missDisplay">30</span>%</div>
+            <input type="range" id="missRate" min="10" max="50" value="30" oninput="calculate()">
+            <p style="display:flex;justify-content:space-between;color:#94a3b8;font-size:0.8rem;margin-top:5px;"><span>10% (Good)</span><span>50% (Critical)</span></p>
+        </div>
+
+        <div class="input-group">
+            <label>Average new patient value</label>
+            <p class="helper">First-year revenue from a typical new patient</p>
+            <div class="input-row">
+                <span>$</span>
+                <input type="number" id="patientValue" value="850" oninput="calculate()">
+            </div>
+        </div>
+
+        <div class="results">
+            <h2>You're Losing</h2>
+            <div class="amount" id="lostAmount">$663,000</div>
+            <div class="per-year">per year</div>
+            <div class="breakdown" id="breakdown">
+                That's 780 missed calls → 780 lost patients → $663,000 in revenue
+            </div>
+        </div>
+
+        <div class="solution">
+            <h3>With DentalCall AI, you could recover</h3>
+            <div class="recover" id="recoverAmount">$464,100</div>
+            <p>70%+ of missed calls converted to appointments</p>
+        </div>
+
+        <a href="https://buy.stripe.com/dRm28t4K53AN3KK9uB67S06" class="cta-btn">
+            Start Free 7-Day Trial →
+        </a>
+
+        <div class="share">
+            <p>Share this calculator:</p>
+            <div class="share-btns">
+                <a href="https://twitter.com/intent/tweet?text=I%20just%20calculated%20how%20much%20my%20dental%20practice%20might%20be%20losing%20to%20missed%20calls.%20Shocking%20results!&url=https://local-lift.onrender.com/widget.html" target="_blank" class="share-btn twitter">Twitter</a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://local-lift.onrender.com/widget.html" target="_blank" class="share-btn linkedin">LinkedIn</a>
+                <button class="share-btn copy" onclick="copyLink()">Copy Link</button>
+            </div>
+        </div>
+
+        <div class="branding">
+            Powered by <a href="https://local-lift.onrender.com">DentalCall AI</a>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            const calls = parseInt(document.getElementById('calls').value) || 0;
+            const missRate = parseInt(document.getElementById('missRate').value) || 0;
+            const patientValue = parseInt(document.getElementById('patientValue').value) || 0;
+
+            document.getElementById('missDisplay').textContent = missRate;
+
+            const missedPerWeek = calls * (missRate / 100);
+            const missedPerYear = missedPerWeek * 52;
+            const lostRevenue = missedPerYear * patientValue;
+            const recoverable = lostRevenue * 0.7;
+
+            document.getElementById('lostAmount').textContent = '$' + lostRevenue.toLocaleString();
+            document.getElementById('recoverAmount').textContent = '$' + Math.round(recoverable).toLocaleString();
+            document.getElementById('breakdown').textContent =
+                `That's ${Math.round(missedPerYear).toLocaleString()} missed calls → ${Math.round(missedPerYear).toLocaleString()} lost patients → $${lostRevenue.toLocaleString()} in revenue`;
+        }
+
+        function copyLink() {
+            navigator.clipboard.writeText('https://local-lift.onrender.com/widget.html');
+            event.target.textContent = 'Copied!';
+            setTimeout(() => event.target.textContent = 'Copy Link', 2000);
+        }
+
+        calculate();
+    </script>
+</body>
+</html>
