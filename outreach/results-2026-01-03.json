@@ -1,0 +1,1006 @@
+{
+  "sent": 0,
+  "failed": 200,
+  "results": [
+    {
+      "email": "office@brownfamilydental.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@garciadentalgroup.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@leedentalstudio.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@sandiegofamilydental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@irvinedentalgroup.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@andersondentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@browndentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@irvinedentalgroup.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@garciafamilydental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@sanfranciscodentalgroup.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@sanjosedentalcare.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@browndentalstudio.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@pasadenasmile.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@andersonsmile.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@sanjosesmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@andersondentalassociates.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@wilsondentalcare.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@losangelesdentalcenter.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@johnsonsmile.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@sanjosedentalgroup.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@johnsoncosmeticdental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@johnsondentalcare.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@sacramentodentalgroup.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@sacramentodentalstudio.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@santamonicadentalassociates.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@taylordentistry.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@sandiegosmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@johnsondentalcenter.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@millerdentalcenter.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@sanfranciscodentalassociates.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@sacramentocosmeticdental.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@sacramentosmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@sanfranciscofamilydental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@andersondentistry.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@sacramentocosmeticdental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@millerdental.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@santamonicadentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@smithsmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@irvinedentalassociates.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@losangelesdentalcare.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@taylordentalcare.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@smithcosmeticdental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@sacramentodentalcenter.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@sandiegodentalcenter.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@taylordentalcare.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@pasadenadentistry.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@losangelessmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@losangelesdentalcenter.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@davisdentalgroup.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@irvinedentalassociates.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@johnsonfamilydental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@santamonicadentalstudio.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@santamonicadentalassociates.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@williamsdentistry.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@santamonicadentalcenter.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@santamonicadentalgroup.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@chendentalcenter.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@wilsondental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@williamsdentalstudio.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@martinezsmile.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@irvinedentalstudio.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@santamonicadentalcare.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@irvinedentalassociates.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@irvinefamilydental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@browndentistry.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@williamsdentalcenter.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@davisdentalgroup.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@johnsoncosmeticdental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@pasadenadentalgroup.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@sanjosedentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@sacramentodentalgroup.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@sacramentosmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@garciadental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@orlandodentalcenter.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@andersonfamilydental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@naplescosmeticdental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@johnsonsmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@williamsdentalassociates.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@miamismile.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@miamismile.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@millerdentalstudio.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@pateldentalgroup.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@andersonfamilydental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@wilsondentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@millerdentalgroup.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@bocaratondental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@naplesdentalcare.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@fortlauderdaledentalcare.com",
+      "success": false,
+      "error": "Unexpected token 'u', \"upstream c\"... is not valid JSON"
+    },
+    {
+      "email": "office@taylordentalassociates.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@naplesdentalcare.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@naplesdentalassociates.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@orlandocosmeticdental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@browndentalassociates.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@tampadental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@garciadentistry.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@naplesdental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@miamicosmeticdental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@miamidentalcenter.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@taylordentalcare.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@taylorfamilydental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@jacksonvillesmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@wilsondentalassociates.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@taylorcosmeticdental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@johnsondentalassociates.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@wilsondentalgroup.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@miamifamilydental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@williamsdentalcare.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@tampadentalstudio.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@bocaratondentalassociates.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@bocaratondentalcenter.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@browndentistry.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@orlandosmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@patelsmile.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@jacksonvilledentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@leedentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@bocaratondentalassociates.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@jacksonvilledental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@tampadentalcenter.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@andersondentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@leedentalcenter.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@chendentistry.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@miamismile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@andersondentalcenter.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@patelcosmeticdental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@williamsdentistry.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@martinezdental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@tampasmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@naplesdental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@davisdental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@orlandodentalcare.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@westpalmbeachfamilydental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@naplessmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@naplesdentalcenter.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@tampafamilydental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@wilsondentistry.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@fortlauderdalefamilydental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@millerdentalgroup.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@jacksonvilledentalcare.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@martinezdentalcare.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@tampafamilydental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@tampadentalassociates.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@westpalmbeachdentalcenter.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@williamsfamilydental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@mckinneydentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@roundrockcosmeticdental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@mckinneydentalcare.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@martinezcosmeticdental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@arlingtonfamilydental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@martinezdentalcare.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@martinezdentalcare.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@mckinneydentalstudio.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@austindentalstudio.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@friscosmile.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@mckinneydentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@patelsmile.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@planodentalgroup.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@roundrockfamilydental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@patelcosmeticdental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@johnsondentalgroup.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@sanantoniodentistry.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@martinezdentalcenter.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@browndentistry.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@planofamilydental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@dallasdentalassociates.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@friscodentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@planodentalgroup.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@arlingtondentalcare.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@arlingtondentalgroup.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@roundrockdental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@austindentalassociates.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@davisdentalcare.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@mckinneydentalassociates.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@arlingtondentalgroup.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@dallasdentalassociates.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@chenfamilydental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@mckinneydentalcare.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@sanantoniofamilydental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@dallasdentalstudio.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@martinezdentistry.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@friscosmile.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@taylorsmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@wilsondentistry.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@dallasdentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@friscocosmeticdental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@austindentalassociates.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@roundrockdentalcenter.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@fortworthdentalcenter.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@sanantoniodentistry.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@fortworthdentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@planosmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@arlingtondental.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@dallasdentalcare.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@williamssmile.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@browndentistry.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@houstondentalcare.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@mckinneydental.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@millersmile.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@fortworthdentalassociates.com",
+      "success": false,
+      "error": "You can only send testing emails to your own email address (colin@localliftleads.com). To send emails to other recipients, please verify a domain at resend.com/domains, and change the `from` address to an email using this domain."
+    },
+    {
+      "email": "office@friscosmile.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    },
+    {
+      "email": "office@taylordentalstudio.com",
+      "success": false,
+      "error": "Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."
+    }
+  ]
+}

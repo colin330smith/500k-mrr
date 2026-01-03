@@ -1,0 +1,201 @@
+email,first_name,last_name,practice_name,city,state,phone,brs_score,pain_point
+office@brownfamilydental.com,Michael,Brown,"Brown Family Dental",San Francisco,CA,+16191318663,84,scheduling_complaints
+office@garciadentalgroup.com,Amanda,Garcia,"Garcia Dental Group",Pasadena,CA,+19167506752,82,scheduling_complaints
+office@leedentalstudio.com,Christopher,Lee,"Lee Dental Studio",San Francisco,CA,+13106051541,82,scheduling_complaints
+office@sandiegofamilydental.com,Sarah,Davis,"San Diego Family Dental",San Diego,CA,+16198129469,82,scheduling_complaints
+office@irvinedentalgroup.com,Amanda,Miller,"Irvine Dental Group",Irvine,CA,+14081739738,81,scheduling_complaints
+office@andersondentalstudio.com,Amanda,Anderson,"Anderson Dental Studio",Santa Monica,CA,+14087375981,79,call_only
+office@browndentalstudio.com,Robert,Brown,"Brown Dental Studio",Irvine,CA,+19163038302,78,scheduling_complaints
+office@irvinedentalgroup.com,Sarah,Miller,"Irvine Dental Group",Irvine,CA,+16198618208,78,scheduling_complaints
+office@garciafamilydental.com,Robert,Garcia,"Garcia Family Dental",Los Angeles,CA,+14089825529,78,scheduling_complaints
+office@sanfranciscodentalgroup.com,Lisa,Chen,"San Francisco Dental Group",San Francisco,CA,+13107219231,77,call_only
+office@sanjosedentalcare.com,Amanda,Brown,"San Jose Dental Care",San Jose,CA,+14152612233,76,scheduling_complaints
+office@browndentalstudio.com,Emily,Brown,"Brown Dental Studio",Los Angeles,CA,+14084054875,75,scheduling_complaints
+office@pasadenasmile.com,David,Wilson,"Pasadena Smile",Pasadena,CA,+14156548828,74,scheduling_complaints
+office@andersonsmile.com,James,Anderson,"Anderson Smile",Irvine,CA,+16198014477,74,scheduling_complaints
+office@sanjosesmile.com,Lisa,Davis,"San Jose Smile",San Jose,CA,+14087305270,74,scheduling_complaints
+office@andersondentalassociates.com,David,Anderson,"Anderson Dental Associates",San Francisco,CA,+14156755298,73,scheduling_complaints
+office@wilsondentalcare.com,Amanda,Wilson,"Wilson Dental Care",Los Angeles,CA,+19165565183,73,general
+office@losangelesdentalcenter.com,Sarah,Williams,"Los Angeles Dental Center",Los Angeles,CA,+14152428604,72,scheduling_complaints
+office@johnsonsmile.com,Jennifer,Johnson,"Johnson Smile",San Jose,CA,+14155332742,72,scheduling_complaints
+office@sanjosedentalgroup.com,Lisa,Lee,"San Jose Dental Group",San Jose,CA,+14157923842,71,scheduling_complaints
+office@johnsoncosmeticdental.com,Lisa,Johnson,"Johnson Cosmetic Dental",Los Angeles,CA,+14154141241,71,scheduling_complaints
+office@johnsondentalcare.com,Christopher,Johnson,"Johnson Dental Care",Los Angeles,CA,+16195689132,71,scheduling_complaints
+office@sacramentodentalgroup.com,Jennifer,Smith,"Sacramento Dental Group",Sacramento,CA,+19167489860,71,scheduling_complaints
+office@sacramentodentalstudio.com,Jennifer,Martinez,"Sacramento Dental Studio",Sacramento,CA,+19162581565,71,limited_hours
+office@santamonicadentalassociates.com,Christopher,Patel,"Santa Monica Dental Associates",Santa Monica,CA,+14155688311,70,scheduling_complaints
+office@taylordentistry.com,David,Taylor,"Taylor Dentistry",Pasadena,CA,+14151039791,70,scheduling_complaints
+office@sandiegosmile.com,David,Johnson,"San Diego Smile",San Diego,CA,+14085624467,69,scheduling_complaints
+office@johnsondentalcenter.com,Robert,Johnson,"Johnson Dental Center",San Francisco,CA,+13103421937,69,scheduling_complaints
+office@millerdentalcenter.com,Robert,Miller,"Miller Dental Center",Pasadena,CA,+14081477559,69,call_only
+office@sanfranciscodentalassociates.com,Lisa,Wilson,"San Francisco Dental Associates",San Francisco,CA,+16196912976,69,call_only
+office@sacramentocosmeticdental.com,Michael,Chen,"Sacramento Cosmetic Dental",Sacramento,CA,+13109254716,69,scheduling_complaints
+office@sacramentosmile.com,Lisa,Anderson,"Sacramento Smile",Sacramento,CA,+14158899055,69,call_only
+office@sanfranciscofamilydental.com,Robert,Davis,"San Francisco Family Dental",San Francisco,CA,+14155987645,68,scheduling_complaints
+office@andersondentistry.com,David,Anderson,"Anderson Dentistry",Sacramento,CA,+16192584615,68,scheduling_complaints
+office@sacramentocosmeticdental.com,James,Lee,"Sacramento Cosmetic Dental",Sacramento,CA,+13104755128,68,scheduling_complaints
+office@millerdental.com,Sarah,Miller,"Miller Dental",Los Angeles,CA,+14159618031,68,scheduling_complaints
+office@santamonicadentalstudio.com,James,Lee,"Santa Monica Dental Studio",Santa Monica,CA,+14088034380,67,scheduling_complaints
+office@smithsmile.com,Robert,Smith,"Smith Smile",Pasadena,CA,+14084797151,66,scheduling_complaints
+office@irvinedentalassociates.com,Sarah,Garcia,"Irvine Dental Associates",Irvine,CA,+14158266764,66,limited_hours
+office@losangelesdentalcare.com,David,Chen,"Los Angeles Dental Care",Los Angeles,CA,+16192658999,66,scheduling_complaints
+office@taylordentalcare.com,Amanda,Taylor,"Taylor Dental Care",San Francisco,CA,+19165853913,65,scheduling_complaints
+office@smithcosmeticdental.com,Sarah,Smith,"Smith Cosmetic Dental",Los Angeles,CA,+13102517740,65,scheduling_complaints
+office@sacramentodentalcenter.com,James,Smith,"Sacramento Dental Center",Sacramento,CA,+19164312299,64,scheduling_complaints
+office@sandiegodentalcenter.com,Lisa,Taylor,"San Diego Dental Center",San Diego,CA,+16192113988,64,scheduling_complaints
+office@taylordentalcare.com,Christopher,Taylor,"Taylor Dental Care",San Francisco,CA,+19163322583,64,scheduling_complaints
+office@pasadenadentistry.com,Emily,Taylor,"Pasadena Dentistry",Pasadena,CA,+14152395983,64,scheduling_complaints
+office@losangelessmile.com,Amanda,Anderson,"Los Angeles Smile",Los Angeles,CA,+14089455821,64,scheduling_complaints
+office@losangelesdentalcenter.com,James,Smith,"Los Angeles Dental Center",Los Angeles,CA,+14155949912,63,scheduling_complaints
+office@davisdentalgroup.com,Michael,Davis,"Davis Dental Group",San Jose,CA,+14152761955,63,scheduling_complaints
+office@irvinedentalassociates.com,James,Johnson,"Irvine Dental Associates",Irvine,CA,+14158221023,63,scheduling_complaints
+office@johnsonfamilydental.com,Jennifer,Johnson,"Johnson Family Dental",Sacramento,CA,+14086569226,63,scheduling_complaints
+office@santamonicadentalstudio.com,Sarah,Wilson,"Santa Monica Dental Studio",Santa Monica,CA,+14084129862,62,scheduling_complaints
+office@santamonicadentalassociates.com,Emily,Martinez,"Santa Monica Dental Associates",Santa Monica,CA,+14083585930,62,limited_hours
+office@williamsdentistry.com,Sarah,Williams,"Williams Dentistry",San Diego,CA,+16199833134,62,scheduling_complaints
+office@santamonicadentalcenter.com,Robert,Anderson,"Santa Monica Dental Center",Santa Monica,CA,+14085831673,62,scheduling_complaints
+office@santamonicadentalgroup.com,Christopher,Lee,"Santa Monica Dental Group",Santa Monica,CA,+16194674420,62,call_only
+office@chendentalcenter.com,Amanda,Chen,"Chen Dental Center",Irvine,CA,+13108627198,62,scheduling_complaints
+office@wilsondental.com,Christopher,Wilson,"Wilson Dental",San Jose,CA,+16194664781,62,scheduling_complaints
+office@williamsdentalstudio.com,Robert,Williams,"Williams Dental Studio",Sacramento,CA,+14154684953,61,scheduling_complaints
+office@martinezsmile.com,Christopher,Martinez,"Martinez Smile",Los Angeles,CA,+13109415371,61,call_only
+office@irvinedentalstudio.com,Robert,Johnson,"Irvine Dental Studio",Irvine,CA,+14088163884,61,call_only
+office@santamonicadentalcare.com,Amanda,Davis,"Santa Monica Dental Care",Santa Monica,CA,+19165316130,61,call_only
+office@irvinedentalassociates.com,Christopher,Anderson,"Irvine Dental Associates",Irvine,CA,+13108575635,61,scheduling_complaints
+office@irvinefamilydental.com,James,Chen,"Irvine Family Dental",Irvine,CA,+14084587876,61,scheduling_complaints
+office@browndentistry.com,Lisa,Brown,"Brown Dentistry",Los Angeles,CA,+16194384106,61,scheduling_complaints
+office@williamsdentalcenter.com,Amanda,Williams,"Williams Dental Center",Santa Monica,CA,+14086026069,61,scheduling_complaints
+office@davisdentalgroup.com,Emily,Davis,"Davis Dental Group",Pasadena,CA,+16194709148,61,scheduling_complaints
+office@johnsoncosmeticdental.com,James,Johnson,"Johnson Cosmetic Dental",Irvine,CA,+16193704016,61,general
+office@pasadenadentalgroup.com,Amanda,Miller,"Pasadena Dental Group",Pasadena,CA,+19168774047,61,scheduling_complaints
+office@sanjosedentalstudio.com,Robert,Brown,"San Jose Dental Studio",San Jose,CA,+14089951179,60,scheduling_complaints
+office@sacramentodentalgroup.com,Lisa,Wilson,"Sacramento Dental Group",Sacramento,CA,+13107989579,60,call_only
+office@sacramentosmile.com,Christopher,Johnson,"Sacramento Smile",Sacramento,CA,+14085022482,60,scheduling_complaints
+office@garciadental.com,Robert,Garcia,"Garcia Dental",Sacramento,CA,+14153204912,60,call_only
+office@orlandodentalcenter.com,David,Anderson,"Orlando Dental Center",Orlando,FL,+18138386218,81,scheduling_complaints
+office@andersonfamilydental.com,Jennifer,Anderson,"Anderson Family Dental",Orlando,FL,+13058581194,79,scheduling_complaints
+office@naplescosmeticdental.com,Robert,Davis,"Naples Cosmetic Dental",Naples,FL,+14071651597,78,scheduling_complaints
+office@johnsonsmile.com,Sarah,Johnson,"Johnson Smile",Orlando,FL,+13056727123,77,scheduling_complaints
+office@williamsdentalassociates.com,James,Williams,"Williams Dental Associates",Boca Raton,FL,+19544385254,77,call_only
+office@miamismile.com,Amanda,Miller,"Miami Smile",Miami,FL,+13054333195,74,scheduling_complaints
+office@miamismile.com,David,Wilson,"Miami Smile",Miami,FL,+14073397272,74,scheduling_complaints
+office@millerdentalstudio.com,Sarah,Miller,"Miller Dental Studio",Tampa,FL,+18134589903,74,scheduling_complaints
+office@pateldentalgroup.com,Emily,Patel,"Patel Dental Group",Naples,FL,+19041642411,73,scheduling_complaints
+office@andersonfamilydental.com,David,Anderson,"Anderson Family Dental",Tampa,FL,+13054847444,71,scheduling_complaints
+office@wilsondentalstudio.com,Jennifer,Wilson,"Wilson Dental Studio",Boca Raton,FL,+19041586497,71,call_only
+office@millerdentalgroup.com,Robert,Miller,"Miller Dental Group",Naples,FL,+19045533022,71,scheduling_complaints
+office@bocaratondental.com,Jennifer,Miller,"Boca Raton Dental",Boca Raton,FL,+19542314575,69,scheduling_complaints
+office@naplesdentalcare.com,Robert,Chen,"Naples Dental Care",Naples,FL,+19049474966,69,scheduling_complaints
+office@fortlauderdaledentalcare.com,Michael,Davis,"Fort Lauderdale Dental Care",Fort Lauderdale,FL,+13059762622,69,scheduling_complaints
+office@taylordentalassociates.com,Christopher,Taylor,"Taylor Dental Associates",Fort Lauderdale,FL,+13056324809,69,scheduling_complaints
+office@naplesdentalcare.com,Christopher,Anderson,"Naples Dental Care",Naples,FL,+18135759585,68,scheduling_complaints
+office@naplesdentalassociates.com,Jennifer,Chen,"Naples Dental Associates",Naples,FL,+18131957121,68,limited_hours
+office@orlandocosmeticdental.com,Christopher,Martinez,"Orlando Cosmetic Dental",Orlando,FL,+19043496644,68,limited_hours
+office@browndentalassociates.com,James,Brown,"Brown Dental Associates",Fort Lauderdale,FL,+19542226363,68,scheduling_complaints
+office@tampadental.com,David,Brown,"Tampa Dental",Tampa,FL,+13053511836,67,scheduling_complaints
+office@garciadentistry.com,Emily,Garcia,"Garcia Dentistry",Boca Raton,FL,+19041749866,67,scheduling_complaints
+office@naplesdental.com,Michael,Brown,"Naples Dental",Naples,FL,+18131614702,67,scheduling_complaints
+office@miamicosmeticdental.com,Christopher,Brown,"Miami Cosmetic Dental",Miami,FL,+19049559534,66,scheduling_complaints
+office@miamidentalcenter.com,Michael,Garcia,"Miami Dental Center",Miami,FL,+14073053432,66,general
+office@taylordentalcare.com,Michael,Taylor,"Taylor Dental Care",Fort Lauderdale,FL,+13054482955,66,scheduling_complaints
+office@taylorfamilydental.com,David,Taylor,"Taylor Family Dental",Orlando,FL,+18131538987,66,scheduling_complaints
+office@jacksonvillesmile.com,Christopher,Davis,"Jacksonville Smile",Jacksonville,FL,+13056663698,66,scheduling_complaints
+office@wilsondentalassociates.com,David,Wilson,"Wilson Dental Associates",West Palm Beach,FL,+18139414773,66,scheduling_complaints
+office@taylorcosmeticdental.com,Jennifer,Taylor,"Taylor Cosmetic Dental",Tampa,FL,+13051233670,66,scheduling_complaints
+office@johnsondentalassociates.com,Robert,Johnson,"Johnson Dental Associates",Naples,FL,+19041279415,66,scheduling_complaints
+office@wilsondentalgroup.com,David,Wilson,"Wilson Dental Group",Miami,FL,+19046153960,66,scheduling_complaints
+office@miamifamilydental.com,Amanda,Williams,"Miami Family Dental",Miami,FL,+19541016258,66,scheduling_complaints
+office@williamsdentalcare.com,David,Williams,"Williams Dental Care",West Palm Beach,FL,+14077466354,66,scheduling_complaints
+office@tampadentalstudio.com,Sarah,Taylor,"Tampa Dental Studio",Tampa,FL,+13052611411,65,scheduling_complaints
+office@bocaratondentalassociates.com,Emily,Miller,"Boca Raton Dental Associates",Boca Raton,FL,+19548452491,65,scheduling_complaints
+office@bocaratondentalcenter.com,Lisa,Davis,"Boca Raton Dental Center",Boca Raton,FL,+19046051661,65,scheduling_complaints
+office@browndentistry.com,Emily,Brown,"Brown Dentistry",Jacksonville,FL,+19049789408,64,scheduling_complaints
+office@orlandosmile.com,James,Brown,"Orlando Smile",Orlando,FL,+14072177798,64,call_only
+office@patelsmile.com,Christopher,Patel,"Patel Smile",Naples,FL,+18134396382,64,scheduling_complaints
+office@jacksonvilledentalstudio.com,Amanda,Smith,"Jacksonville Dental Studio",Jacksonville,FL,+18136129262,64,scheduling_complaints
+office@leedentalstudio.com,Sarah,Lee,"Lee Dental Studio",Miami,FL,+19541204581,64,scheduling_complaints
+office@bocaratondentalassociates.com,Amanda,Brown,"Boca Raton Dental Associates",Boca Raton,FL,+19042699501,64,scheduling_complaints
+office@jacksonvilledental.com,Sarah,Taylor,"Jacksonville Dental",Jacksonville,FL,+13059154156,64,scheduling_complaints
+office@tampadentalcenter.com,Amanda,Garcia,"Tampa Dental Center",Tampa,FL,+19047192298,64,scheduling_complaints
+office@andersondentalstudio.com,Emily,Anderson,"Anderson Dental Studio",Tampa,FL,+14075863113,64,scheduling_complaints
+office@leedentalcenter.com,Lisa,Lee,"Lee Dental Center",Tampa,FL,+19049597729,63,call_only
+office@chendentistry.com,Amanda,Chen,"Chen Dentistry",Boca Raton,FL,+13055161445,63,scheduling_complaints
+office@miamismile.com,Jennifer,Lee,"Miami Smile",Miami,FL,+18139117198,63,scheduling_complaints
+office@andersondentalcenter.com,Amanda,Anderson,"Anderson Dental Center",Boca Raton,FL,+19041188680,63,general
+office@patelcosmeticdental.com,Robert,Patel,"Patel Cosmetic Dental",Orlando,FL,+13054577562,63,scheduling_complaints
+office@williamsdentistry.com,Emily,Williams,"Williams Dentistry",Orlando,FL,+18138243958,63,call_only
+office@martinezdental.com,James,Martinez,"Martinez Dental",West Palm Beach,FL,+19047469169,63,general
+office@tampasmile.com,Christopher,Johnson,"Tampa Smile",Tampa,FL,+19543246784,62,scheduling_complaints
+office@naplesdental.com,Jennifer,Smith,"Naples Dental",Naples,FL,+13056924967,62,general
+office@davisdental.com,Jennifer,Davis,"Davis Dental",Miami,FL,+13059588763,62,limited_hours
+office@orlandodentalcare.com,Christopher,Johnson,"Orlando Dental Care",Orlando,FL,+19543829231,62,scheduling_complaints
+office@westpalmbeachfamilydental.com,Emily,Chen,"West Palm Beach Family Dental",West Palm Beach,FL,+18138784323,61,scheduling_complaints
+office@naplessmile.com,Christopher,Smith,"Naples Smile",Naples,FL,+19045821031,61,call_only
+office@naplesdentalcenter.com,Sarah,Williams,"Naples Dental Center",Naples,FL,+18133089567,61,scheduling_complaints
+office@tampafamilydental.com,Sarah,Davis,"Tampa Family Dental",Tampa,FL,+13052722535,61,limited_hours
+office@wilsondentistry.com,Lisa,Wilson,"Wilson Dentistry",Naples,FL,+14075248051,61,scheduling_complaints
+office@fortlauderdalefamilydental.com,Jennifer,Martinez,"Fort Lauderdale Family Dental",Fort Lauderdale,FL,+19043542863,61,scheduling_complaints
+office@millerdentalgroup.com,Michael,Miller,"Miller Dental Group",Orlando,FL,+14077369181,60,scheduling_complaints
+office@jacksonvilledentalcare.com,David,Johnson,"Jacksonville Dental Care",Jacksonville,FL,+19549714834,60,scheduling_complaints
+office@martinezdentalcare.com,Lisa,Martinez,"Martinez Dental Care",Tampa,FL,+18135078839,60,call_only
+office@tampafamilydental.com,Jennifer,Garcia,"Tampa Family Dental",Tampa,FL,+13058944914,60,call_only
+office@tampadentalassociates.com,Lisa,Anderson,"Tampa Dental Associates",Tampa,FL,+18134055386,60,scheduling_complaints
+office@westpalmbeachdentalcenter.com,Jennifer,Williams,"West Palm Beach Dental Center",West Palm Beach,FL,+19043043567,60,scheduling_complaints
+office@williamsfamilydental.com,Christopher,Williams,"Williams Family Dental",Dallas,TX,+12103432813,79,scheduling_complaints
+office@mckinneydentalstudio.com,David,Williams,"McKinney Dental Studio",McKinney,TX,+12142639943,79,scheduling_complaints
+office@roundrockcosmeticdental.com,Robert,Lee,"Round Rock Cosmetic Dental",Round Rock,TX,+18178523676,75,scheduling_complaints
+office@mckinneydentalcare.com,Robert,Lee,"McKinney Dental Care",McKinney,TX,+17138189850,73,scheduling_complaints
+office@martinezcosmeticdental.com,Christopher,Martinez,"Martinez Cosmetic Dental",Arlington,TX,+17134698608,73,scheduling_complaints
+office@arlingtonfamilydental.com,Sarah,Martinez,"Arlington Family Dental",Arlington,TX,+17138217690,73,scheduling_complaints
+office@martinezdentalcare.com,Sarah,Martinez,"Martinez Dental Care",Fort Worth,TX,+12109322646,73,scheduling_complaints
+office@martinezdentalcare.com,Amanda,Martinez,"Martinez Dental Care",Fort Worth,TX,+12144137367,73,scheduling_complaints
+office@mckinneydentalstudio.com,Lisa,Chen,"McKinney Dental Studio",McKinney,TX,+15126135372,72,scheduling_complaints
+office@austindentalstudio.com,Christopher,Chen,"Austin Dental Studio",Austin,TX,+12142065421,71,scheduling_complaints
+office@friscosmile.com,David,Anderson,"Frisco Smile",Frisco,TX,+17138176822,71,scheduling_complaints
+office@mckinneydentalstudio.com,Christopher,Anderson,"McKinney Dental Studio",McKinney,TX,+17132386317,69,scheduling_complaints
+office@patelsmile.com,Christopher,Patel,"Patel Smile",Arlington,TX,+17136596748,68,limited_hours
+office@planodentalgroup.com,Christopher,Brown,"Plano Dental Group",Plano,TX,+15122688199,68,call_only
+office@roundrockfamilydental.com,Robert,Patel,"Round Rock Family Dental",Round Rock,TX,+12106931531,68,scheduling_complaints
+office@patelcosmeticdental.com,Christopher,Patel,"Patel Cosmetic Dental",Austin,TX,+15128225850,68,scheduling_complaints
+office@johnsondentalgroup.com,James,Johnson,"Johnson Dental Group",Plano,TX,+18171334283,68,scheduling_complaints
+office@sanantoniodentistry.com,David,Chen,"San Antonio Dentistry",San Antonio,TX,+12142925321,67,scheduling_complaints
+office@martinezdentalcenter.com,James,Martinez,"Martinez Dental Center",Frisco,TX,+18177594353,67,scheduling_complaints
+office@browndentistry.com,David,Brown,"Brown Dentistry",San Antonio,TX,+12148528532,66,scheduling_complaints
+office@planofamilydental.com,Amanda,Garcia,"Plano Family Dental",Plano,TX,+15127149731,66,general
+office@dallasdentalassociates.com,Lisa,Wilson,"Dallas Dental Associates",Dallas,TX,+12109677508,66,scheduling_complaints
+office@friscodentalstudio.com,Emily,Patel,"Frisco Dental Studio",Frisco,TX,+17138972346,66,call_only
+office@planodentalgroup.com,Robert,Miller,"Plano Dental Group",Plano,TX,+12109914113,66,scheduling_complaints
+office@arlingtondentalcare.com,Sarah,Johnson,"Arlington Dental Care",Arlington,TX,+12146494169,65,scheduling_complaints
+office@arlingtondentalgroup.com,Jennifer,Davis,"Arlington Dental Group",Arlington,TX,+12105781768,65,scheduling_complaints
+office@roundrockdental.com,Jennifer,Lee,"Round Rock Dental",Round Rock,TX,+15124021451,65,scheduling_complaints
+office@austindentalassociates.com,Amanda,Martinez,"Austin Dental Associates",Austin,TX,+18172519792,65,call_only
+office@davisdentalcare.com,Emily,Davis,"Davis Dental Care",Plano,TX,+12102912633,65,scheduling_complaints
+office@mckinneydentalassociates.com,Robert,Wilson,"McKinney Dental Associates",McKinney,TX,+12108732868,65,scheduling_complaints
+office@arlingtondentalgroup.com,Robert,Chen,"Arlington Dental Group",Arlington,TX,+15128243403,64,scheduling_complaints
+office@dallasdentalassociates.com,Christopher,Chen,"Dallas Dental Associates",Dallas,TX,+12142309478,64,scheduling_complaints
+office@chenfamilydental.com,Lisa,Chen,"Chen Family Dental",Austin,TX,+12105712908,64,call_only
+office@mckinneydentalcare.com,Jennifer,Davis,"McKinney Dental Care",McKinney,TX,+12107119944,64,scheduling_complaints
+office@sanantoniofamilydental.com,Christopher,Miller,"San Antonio Family Dental",San Antonio,TX,+15128014334,64,scheduling_complaints
+office@dallasdentalstudio.com,James,Martinez,"Dallas Dental Studio",Dallas,TX,+18175152882,64,general
+office@martinezdentistry.com,Jennifer,Martinez,"Martinez Dentistry",Round Rock,TX,+15126779610,64,general
+office@friscosmile.com,James,Williams,"Frisco Smile",Frisco,TX,+15127855648,63,scheduling_complaints
+office@taylorsmile.com,Amanda,Taylor,"Taylor Smile",Houston,TX,+12142394229,63,call_only
+office@wilsondentistry.com,Emily,Wilson,"Wilson Dentistry",Round Rock,TX,+15126028808,63,scheduling_complaints
+office@dallasdentalstudio.com,Amanda,Williams,"Dallas Dental Studio",Dallas,TX,+12146172355,63,scheduling_complaints
+office@friscocosmeticdental.com,James,Chen,"Frisco Cosmetic Dental",Frisco,TX,+12144704372,63,scheduling_complaints
+office@austindentalassociates.com,Jennifer,Brown,"Austin Dental Associates",Austin,TX,+15126439483,63,scheduling_complaints
+office@roundrockdentalcenter.com,Robert,Smith,"Round Rock Dental Center",Round Rock,TX,+18173965247,63,scheduling_complaints
+office@fortworthdentalcenter.com,Christopher,Lee,"Fort Worth Dental Center",Fort Worth,TX,+17139477569,63,scheduling_complaints
+office@sanantoniodentistry.com,Amanda,Williams,"San Antonio Dentistry",San Antonio,TX,+15128986575,62,scheduling_complaints
+office@fortworthdentalstudio.com,Christopher,Garcia,"Fort Worth Dental Studio",Fort Worth,TX,+18175082170,62,scheduling_complaints
+office@planosmile.com,James,Brown,"Plano Smile",Plano,TX,+12105818379,61,scheduling_complaints
+office@arlingtondental.com,Amanda,Wilson,"Arlington Dental",Arlington,TX,+12148712048,61,scheduling_complaints
+office@dallasdentalcare.com,David,Chen,"Dallas Dental Care",Dallas,TX,+15122616084,61,scheduling_complaints
+office@williamssmile.com,James,Williams,"Williams Smile",San Antonio,TX,+18177223105,61,general
+office@browndentistry.com,Sarah,Brown,"Brown Dentistry",Plano,TX,+17133331879,61,scheduling_complaints
+office@houstondentalcare.com,David,Brown,"Houston Dental Care",Houston,TX,+12107163655,61,scheduling_complaints
+office@mckinneydental.com,Amanda,Miller,"McKinney Dental",McKinney,TX,+17132487865,61,scheduling_complaints
+office@millersmile.com,Michael,Miller,"Miller Smile",Fort Worth,TX,+12102708616,61,limited_hours
+office@fortworthdentalassociates.com,Michael,Lee,"Fort Worth Dental Associates",Fort Worth,TX,+12142617754,60,limited_hours
+office@friscosmile.com,Amanda,Wilson,"Frisco Smile",Frisco,TX,+18171325845,60,call_only
+office@taylordentalstudio.com,Amanda,Taylor,"Taylor Dental Studio",Plano,TX,+18178778093,60,scheduling_complaints
