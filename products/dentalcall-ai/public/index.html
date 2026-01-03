@@ -121,6 +121,17 @@
         .footer-links a:hover { color: white; }
         .footer-bottom { max-width: 1000px; margin: 40px auto 0; padding-top: 30px; border-top: 1px solid #1e293b; text-align: center; color: #64748b; font-size: 0.9rem; }
 
+        /* Lead Capture Form */
+        .lead-capture { padding: 100px 20px; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+        .lead-form-container { max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .lead-form-content h2 { font-size: 2.2rem; color: white; margin-bottom: 15px; font-weight: 700; }
+        .lead-form-content p { color: #94a3b8; font-size: 1.1rem; }
+        .lead-form { background: white; padding: 35px; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
+        .lead-form input { padding: 14px 18px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 1rem; transition: border-color 0.2s; font-family: inherit; }
+        .lead-form input:focus { outline: none; border-color: #667eea; }
+        .form-note { text-align: center; color: #64748b; font-size: 0.85rem; margin-top: 15px; }
+
         /* Mobile */
         @media (max-width: 768px) {
             .nav { padding: 15px 20px; }
@@ -130,6 +141,8 @@
             .stat-value { font-size: 2rem; }
             .price-card.featured { transform: scale(1); }
             .price-card.featured:hover { transform: translateY(-5px); }
+            .lead-form-container { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+            .form-row { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -318,6 +331,30 @@
                 <h3>What if a patient needs to speak to a human?</h3>
                 <p>The AI can transfer calls to your team anytime. It also sends instant notifications for emergencies or urgent matters.</p>
             </div>
+        </div>
+    </section>
+
+    <section class="lead-capture" id="demo">
+        <div class="lead-form-container">
+            <div class="lead-form-content">
+                <h2>Get a Free Demo</h2>
+                <p>See how DentalCall AI works for your practice. We'll give you a personalized walkthrough.</p>
+            </div>
+            <form class="lead-form" action="https://formsubmit.co/colin@localliftleads.com" method="POST">
+                <input type="hidden" name="_subject" value="🦷 New Demo Request - DentalCall AI">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://local-lift.onrender.com?thanks=1">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="text" name="practice" placeholder="Practice Name" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%;">Request Free Demo →</button>
+                <p class="form-note">We'll reach out within 24 hours. No spam, ever.</p>
+            </form>
         </div>
     </section>
 
