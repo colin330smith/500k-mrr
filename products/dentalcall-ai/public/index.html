@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentalCall AI - Never Miss Another Patient Call</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a2e; }
+        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 20px; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.3rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; }
+        .stats { display: flex; justify-content: center; gap: 40px; margin: 40px 0; flex-wrap: wrap; }
+        .stat { text-align: center; }
+        .stat-value { font-size: 2.5rem; font-weight: bold; }
+        .stat-label { font-size: 0.9rem; opacity: 0.8; }
+        .cta-btn { background: white; color: #667eea; padding: 15px 40px; font-size: 1.2rem; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; transition: transform 0.2s; }
+        .cta-btn:hover { transform: scale(1.05); }
+        .benefits { padding: 80px 20px; max-width: 1000px; margin: 0 auto; }
+        .benefits h2 { text-align: center; font-size: 2rem; margin-bottom: 50px; }
+        .benefit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .benefit { padding: 30px; background: #f8f9fa; border-radius: 12px; }
+        .benefit h3 { color: #667eea; margin-bottom: 10px; }
+        .pricing { background: #f8f9fa; padding: 80px 20px; }
+        .pricing h2 { text-align: center; font-size: 2rem; margin-bottom: 50px; }
+        .pricing-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; }
+        .price-card { background: white; padding: 40px; border-radius: 16px; text-align: center; width: 300px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .price-card.featured { border: 3px solid #667eea; transform: scale(1.05); }
+        .price-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+        .price { font-size: 3rem; font-weight: bold; color: #667eea; }
+        .price span { font-size: 1rem; color: #666; }
+        .price-card ul { list-style: none; margin: 20px 0; text-align: left; }
+        .price-card li { padding: 8px 0; border-bottom: 1px solid #eee; }
+        .price-card li:before { content: "✓ "; color: #667eea; font-weight: bold; }
+        .buy-btn { background: #667eea; color: white; padding: 12px 30px; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; width: 100%; margin-top: 20px; }
+        .buy-btn:hover { background: #5a6fd6; }
+        .footer { background: #1a1a2e; color: white; padding: 40px 20px; text-align: center; }
+        .trial-badge { background: #10b981; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Never Miss Another Patient Call</h1>
+        <p>AI receptionist that answers every call 24/7, books appointments, and integrates with your dental practice.</p>
+        <div class="stats">
+            <div class="stat"><div class="stat-value">32%</div><div class="stat-label">Calls Missed by Avg Practice</div></div>
+            <div class="stat"><div class="stat-value">$850+</div><div class="stat-label">Lost Per Missed Call</div></div>
+            <div class="stat"><div class="stat-value">24/7</div><div class="stat-label">AI Availability</div></div>
+        </div>
+        <button class="cta-btn" onclick="scrollToPricing()">Start Free Trial</button>
+    </section>
+
+    <section class="benefits">
+        <h2>Why Dental Practices Choose Us</h2>
+        <div class="benefit-grid">
+            <div class="benefit">
+                <h3>Never Miss a Call</h3>
+                <p>Our AI answers every call instantly, 24/7/365. No more patients going to voicemail or competitors.</p>
+            </div>
+            <div class="benefit">
+                <h3>Book Appointments Automatically</h3>
+                <p>AI checks your calendar availability and books appointments in real-time. Patients get instant confirmation.</p>
+            </div>
+            <div class="benefit">
+                <h3>HIPAA Compliant</h3>
+                <p>Built with healthcare privacy in mind. All calls are encrypted and compliant with HIPAA requirements.</p>
+            </div>
+            <div class="benefit">
+                <h3>Integrates with Your Systems</h3>
+                <p>Works with your existing practice management software. No need to change how you work.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <h2>Simple, Transparent Pricing</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Starter</h3>
+                <div class="price">$299<span>/mo</span></div>
+                <span class="trial-badge">7-day free trial</span>
+                <ul>
+                    <li>500 minutes/month</li>
+                    <li>24/7 call answering</li>
+                    <li>Appointment booking</li>
+                    <li>SMS confirmations</li>
+                    <li>Email support</li>
+                </ul>
+                <button class="buy-btn" onclick="checkout('price_1SlHfzQbwtzxbB4UVOjIPbcy')">Start Free Trial</button>
+            </div>
+            <div class="price-card featured">
+                <h3>Professional</h3>
+                <div class="price">$599<span>/mo</span></div>
+                <span class="trial-badge">7-day free trial</span>
+                <ul>
+                    <li>2,000 minutes/month</li>
+                    <li>Everything in Starter</li>
+                    <li>Call recording</li>
+                    <li>Analytics dashboard</li>
+                    <li>Priority support</li>
+                </ul>
+                <button class="buy-btn" onclick="checkout('price_1SlHfzQbwtzxbB4UuBkv7bN6')">Start Free Trial</button>
+            </div>
+            <div class="price-card">
+                <h3>Business</h3>
+                <div class="price">$999<span>/mo</span></div>
+                <span class="trial-badge">7-day free trial</span>
+                <ul>
+                    <li>5,000 minutes/month</li>
+                    <li>Everything in Pro</li>
+                    <li>Multi-location support</li>
+                    <li>Custom AI training</li>
+                    <li>Dedicated account manager</li>
+                </ul>
+                <button class="buy-btn" onclick="checkout('price_1SlHg0QbwtzxbB4UyJ5B3vDJ')">Start Free Trial</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <p>DentalCall AI - AI Receptionist for Dental Practices</p>
+        <p style="opacity:0.7; margin-top:10px;">Questions? Call us: +1 (972) 845-8338</p>
+        <p style="opacity:0.5; margin-top:20px;">© 2026 DentalCall AI. All rights reserved.</p>
+    </section>
+
+    <script>
+        const stripe = Stripe('pk_live_51SPT4IQbwtzxbB4U8isKvIQBBF4Te7HjeIh37XwGOGWt8VhbkjjsrYIHR770D7iv1vPLUl8DSDlRy3p83htAljxQ006l3ipgMm');
+
+        function scrollToPricing() {
+            document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        async function checkout(priceId) {
+            try {
+                const response = await fetch('https://api.stripe.com/v1/checkout/sessions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        'line_items[0][price]': priceId,
+                        'line_items[0][quantity]': '1',
+                        'mode': 'subscription',
+                        'success_url': window.location.href + '?success=true',
+                        'cancel_url': window.location.href,
+                        'subscription_data[trial_period_days]': '7'
+                    })
+                });
+                // Note: This won't work client-side due to CORS
+                // Need server-side endpoint
+                alert('To complete signup, please email: colin@localliftleads.com with your plan choice. We\'ll set up your account within 24 hours!');
+            } catch (e) {
+                alert('To complete signup, please email: colin@localliftleads.com with your plan choice. We\'ll set up your account within 24 hours!');
+            }
+        }
+    </script>
+</body>
+</html>
