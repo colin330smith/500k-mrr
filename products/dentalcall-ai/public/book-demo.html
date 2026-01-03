@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Demo - DentalCall AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 40px 20px; }
+
+        .container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+        .left-panel { color: white; padding: 40px 20px; }
+        .logo { font-size: 1.8rem; font-weight: 800; margin-bottom: 30px; }
+        .left-panel h1 { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; }
+        .left-panel p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; }
+        .benefits { list-style: none; }
+        .benefits li { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; font-size: 1rem; }
+        .benefits li span { font-size: 1.3rem; }
+
+        .right-panel { background: white; border-radius: 20px; padding: 40px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+        .right-panel h2 { font-size: 1.5rem; margin-bottom: 25px; color: #1e293b; }
+
+        .time-slots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 25px; }
+        .time-slot { padding: 12px; border: 2px solid #e2e8f0; border-radius: 10px; text-align: center; cursor: pointer; transition: all 0.2s; font-weight: 500; }
+        .time-slot:hover { border-color: #667eea; background: #f0f4ff; }
+        .time-slot.selected { border-color: #667eea; background: #667eea; color: white; }
+
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; color: #1e293b; margin-bottom: 8px; }
+        .form-group input, .form-group select { width: 100%; padding: 14px 18px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 1rem; transition: border-color 0.2s; font-family: inherit; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: #667eea; }
+
+        .submit-btn { width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 16px; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); }
+
+        .note { text-align: center; color: #64748b; font-size: 0.9rem; margin-top: 20px; }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            .time-slots { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo">DentalCall AI</div>
+            <h1>Book Your Free Demo</h1>
+            <p>See how DentalCall AI can recover $100K+ in lost revenue from missed patient calls.</p>
+            <ul class="benefits">
+                <li><span>✅</span> 15-minute personalized walkthrough</li>
+                <li><span>📊</span> See your missed call revenue analysis</li>
+                <li><span>🎯</span> Custom recommendations for your practice</li>
+                <li><span>🎁</span> Get exclusive launch pricing (20% off)</li>
+            </ul>
+        </div>
+
+        <div class="right-panel">
+            <h2>Select a Time That Works</h2>
+
+            <form action="https://formsubmit.co/colin@localliftleads.com" method="POST">
+                <input type="hidden" name="_subject" value="🗓️ Demo Booking Request - DentalCall AI">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://local-lift.onrender.com/book-demo.html?booked=1">
+                <input type="hidden" name="selectedTime" id="selectedTimeInput">
+
+                <div class="form-group">
+                    <label>Available Times (EST)</label>
+                    <div class="time-slots">
+                        <div class="time-slot" onclick="selectTime(this, '9:00 AM')">9:00 AM</div>
+                        <div class="time-slot" onclick="selectTime(this, '10:00 AM')">10:00 AM</div>
+                        <div class="time-slot" onclick="selectTime(this, '11:00 AM')">11:00 AM</div>
+                        <div class="time-slot" onclick="selectTime(this, '1:00 PM')">1:00 PM</div>
+                        <div class="time-slot" onclick="selectTime(this, '2:00 PM')">2:00 PM</div>
+                        <div class="time-slot" onclick="selectTime(this, '3:00 PM')">3:00 PM</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Day</label>
+                    <select name="preferredDay" required>
+                        <option value="">Select a day...</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" placeholder="Dr. John Smith" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Practice Name</label>
+                    <input type="text" name="practice" placeholder="Smile Dental Care" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="john@smiledental.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" name="phone" placeholder="(555) 123-4567" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Confirm Demo Booking</button>
+                <p class="note">We'll send a calendar invite to your email within 1 hour.</p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function selectTime(element, time) {
+            document.querySelectorAll('.time-slot').forEach(el => el.classList.remove('selected'));
+            element.classList.add('selected');
+            document.getElementById('selectedTimeInput').value = time;
+        }
+
+        // Auto-select first time slot
+        document.querySelector('.time-slot').click();
+
+        // Check if booking was successful
+        if (window.location.search.includes('booked=1')) {
+            document.querySelector('.right-panel').innerHTML = `
+                <div style="text-align:center;padding:40px 0;">
+                    <div style="font-size:4rem;margin-bottom:20px;">🎉</div>
+                    <h2 style="font-size:1.8rem;margin-bottom:15px;color:#1e293b;">Demo Booked!</h2>
+                    <p style="color:#64748b;margin-bottom:25px;">We'll send you a calendar invite within the hour.</p>
+                    <a href="https://local-lift.onrender.com" style="background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);color:white;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;">Back to Home</a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
