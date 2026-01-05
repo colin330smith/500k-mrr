@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Purchase - DentalCall AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+
+        .checkout-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; width: 100%; }
+
+        .order-summary { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; color: white; }
+        .order-summary h2 { font-size: 1.5rem; margin-bottom: 30px; }
+        .plan-card { background: rgba(255,255,255,0.15); padding: 25px; border-radius: 15px; margin-bottom: 20px; }
+        .plan-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
+        .plan-price { font-size: 2.5rem; font-weight: 800; }
+        .plan-price span { font-size: 1rem; opacity: 0.8; }
+        .plan-features { margin-top: 20px; }
+        .plan-features li { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; opacity: 0.9; }
+        .plan-features li::before { content: '✓'; color: #10b981; font-weight: bold; }
+        .guarantee { background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.5); padding: 20px; border-radius: 12px; margin-top: 25px; }
+        .guarantee h3 { color: #10b981; margin-bottom: 8px; }
+        .guarantee p { font-size: 0.9rem; opacity: 0.9; }
+
+        .payment-form { background: white; padding: 45px; border-radius: 20px; box-shadow: 0 25px 80px rgba(0,0,0,0.3); }
+        .payment-form h2 { font-size: 1.5rem; margin-bottom: 10px; color: #1e293b; }
+        .payment-form .secure-badge { display: flex; align-items: center; gap: 8px; color: #64748b; font-size: 0.9rem; margin-bottom: 30px; }
+        .payment-form .secure-badge span { color: #10b981; }
+
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; color: #1e293b; margin-bottom: 8px; font-size: 0.95rem; }
+        .form-group input { width: 100%; padding: 14px 18px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 1rem; transition: all 0.2s; }
+        .form-group input:focus { outline: none; border-color: #667eea; box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+        #card-element { padding: 16px 18px; border: 2px solid #e2e8f0; border-radius: 10px; background: white; }
+        #card-errors { color: #ef4444; font-size: 0.85rem; margin-top: 8px; }
+
+        .pay-btn { width: 100%; padding: 18px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 700; cursor: pointer; margin-top: 25px; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .pay-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4); }
+        .pay-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+        .pay-btn .spinner { width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 1s linear infinite; display: none; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .trust-signals { display: flex; justify-content: center; gap: 25px; margin-top: 25px; color: #64748b; font-size: 0.85rem; }
+        .trust-signals span { display: flex; align-items: center; gap: 5px; }
+
+        .success-message { display: none; text-align: center; padding: 40px; }
+        .success-message h2 { color: #10b981; font-size: 1.8rem; margin-bottom: 15px; }
+        .success-message p { color: #64748b; margin-bottom: 25px; }
+        .success-message .btn { background: #10b981; color: white; padding: 15px 35px; border-radius: 10px; text-decoration: none; font-weight: 600; display: inline-block; }
+
+        @media (max-width: 768px) {
+            .checkout-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="plan-card">
+                <div class="plan-name">Professional Plan</div>
+                <div class="plan-price">$199<span>/month</span></div>
+                <p style="opacity: 0.8; margin-top: 5px;">JANUARY SPECIAL - 60% OFF (was $499)</p>
+            </div>
+            <ul class="plan-features">
+                <li>2,000 minutes/month</li>
+                <li>24/7 AI call answering</li>
+                <li>Appointment booking</li>
+                <li>SMS confirmations</li>
+                <li>Call recording & transcripts</li>
+                <li>Analytics dashboard</li>
+                <li>Priority phone support</li>
+            </ul>
+            <div class="guarantee">
+                <h3>💯 30-Day Money-Back Guarantee</h3>
+                <p>Not satisfied? Get a full refund within 30 days, no questions asked.</p>
+            </div>
+        </div>
+
+        <div class="payment-form" id="paymentForm">
+            <h2>Payment Details</h2>
+            <div class="secure-badge"><span>🔒</span> Secure 256-bit SSL encryption</div>
+
+            <form id="payment-form">
+                <div class="form-group">
+                    <label>Practice Name</label>
+                    <input type="text" id="practice-name" required placeholder="e.g., Smile Dental Care">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="name" required placeholder="Dr. Jane Smith">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" required placeholder="jane@practice.com">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" id="phone" required placeholder="(555) 123-4567">
+                </div>
+
+                <div class="form-group">
+                    <label>Card Information</label>
+                    <div id="card-element"></div>
+                    <div id="card-errors" role="alert"></div>
+                </div>
+
+                <button type="submit" class="pay-btn" id="submit-btn">
+                    <span class="spinner" id="spinner"></span>
+                    <span id="btn-text">Pay $199/month →</span>
+                </button>
+            </form>
+
+            <div class="trust-signals">
+                <span>🔒 Secure</span>
+                <span>💳 Powered by Stripe</span>
+                <span>✓ HIPAA Compliant</span>
+            </div>
+        </div>
+
+        <div class="success-message" id="successMessage">
+            <h2>🎉 Welcome to DentalCall AI!</h2>
+            <p>Your payment was successful. Let's get your AI receptionist set up!</p>
+            <a href="dashboard.html" class="btn">Go to Dashboard →</a>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Stripe
+        const stripe = Stripe('pk_live_51Sl1RHDzMzBDJTFbl8LPr6xM8NUxzWb5Na8hIFyZW5bwapM4OoztPtZuDrhyEqis7JQFzlzqHUPMBW8Eq1fKxPfy00gnMotS4a');
+        const elements = stripe.elements();
+
+        // Create card element
+        const cardElement = elements.create('card', {
+            style: {
+                base: {
+                    fontSize: '16px',
+                    color: '#1e293b',
+                    '::placeholder': { color: '#94a3b8' }
+                },
+                invalid: { color: '#ef4444' }
+            }
+        });
+        cardElement.mount('#card-element');
+
+        // Handle errors
+        cardElement.on('change', function(event) {
+            const displayError = document.getElementById('card-errors');
+            displayError.textContent = event.error ? event.error.message : '';
+        });
+
+        // Handle form submission
+        const form = document.getElementById('payment-form');
+        form.addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const submitBtn = document.getElementById('submit-btn');
+            const spinner = document.getElementById('spinner');
+            const btnText = document.getElementById('btn-text');
+
+            submitBtn.disabled = true;
+            spinner.style.display = 'block';
+            btnText.textContent = 'Processing...';
+
+            // Create payment method
+            const {paymentMethod, error} = await stripe.createPaymentMethod({
+                type: 'card',
+                card: cardElement,
+                billing_details: {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value
+                }
+            });
+
+            if (error) {
+                document.getElementById('card-errors').textContent = error.message;
+                submitBtn.disabled = false;
+                spinner.style.display = 'none';
+                btnText.textContent = 'Pay $199/month →';
+            } else {
+                // Send payment method to our team for processing
+                const formData = {
+                    practice: document.getElementById('practice-name').value,
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    paymentMethodId: paymentMethod.id,
+                    plan: 'professional',
+                    amount: 199
+                };
+
+                // Submit to FormSubmit for immediate notification
+                const form = document.createElement('form');
+                form.method = 'POST';
+                form.action = 'https://formsubmit.co/colin@localliftleads.com';
+
+                const fields = {
+                    '_subject': '💰 NEW PAYMENT - DentalCall AI - $199/mo - PROCESS NOW',
+                    '_captcha': 'false',
+                    '_template': 'table',
+                    'Practice': formData.practice,
+                    'Name': formData.name,
+                    'Email': formData.email,
+                    'Phone': formData.phone,
+                    'Plan': 'Professional ($199/mo)',
+                    'Payment_Method_ID': formData.paymentMethodId,
+                    'Status': 'READY TO CHARGE - Use payment method ID in Stripe Dashboard'
+                };
+
+                for (const [key, value] of Object.entries(fields)) {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = key;
+                    input.value = value;
+                    form.appendChild(input);
+                }
+
+                document.body.appendChild(form);
+
+                // Save to localStorage for dashboard
+                localStorage.setItem('dentalcall_practiceName', formData.practice);
+                localStorage.setItem('dentalcall_email', formData.email);
+                localStorage.setItem('dentalcall_practicePhone', formData.phone);
+                localStorage.setItem('dentalcall_paid', 'true');
+
+                // Show success and submit
+                document.getElementById('paymentForm').style.display = 'none';
+                document.getElementById('successMessage').style.display = 'block';
+                document.querySelector('.order-summary').innerHTML = `
+                    <div style="text-align: center; padding: 40px;">
+                        <div style="font-size: 4rem; margin-bottom: 20px;">✓</div>
+                        <h2 style="margin-bottom: 15px;">Payment Received!</h2>
+                        <p style="opacity: 0.9;">We'll process your subscription and call you within 5 minutes to complete setup.</p>
+                    </div>
+                `;
+
+                form.submit();
+            }
+        });
+    </script>
+</body>
+</html>
