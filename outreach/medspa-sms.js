@@ -6,7 +6,7 @@ const client = twilio(
     process.env.TWILIO_AUTH_TOKEN
 );
 
-const FROM_NUMBER = '+16502015786';
+const FROM_NUMBER = '+18334025325';
 
 const leads = JSON.parse(fs.readFileSync('../leads/medspa/sample-leads.json', 'utf8'));
 
