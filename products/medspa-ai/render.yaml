@@ -1,7 +1,30 @@
 services:
+  # Static frontend
   - type: web
     name: medspa-revai
     env: docker
     plan: free
+    dockerfilePath: ./Dockerfile
     healthCheckPath: /
     autoDeploy: true
+
+  # API backend
+  - type: web
+    name: medspa-revai-api
+    env: docker
+    plan: free
+    dockerfilePath: ./api/Dockerfile
+    dockerContext: ./api
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: VAPI_API_KEY
+        sync: false
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
