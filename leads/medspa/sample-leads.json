@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Glow Med Spa",
+    "address": "123 Beverly Blvd, Los Angeles, CA 90048",
+    "phone": "+13105551234",
+    "rating": 4.8,
+    "reviews": 245,
+    "city": "Los Angeles, CA"
+  },
+  {
+    "name": "Radiance Medical Spa",
+    "address": "456 Collins Ave, Miami Beach, FL 33139",
+    "phone": "+13055552345",
+    "rating": 4.9,
+    "reviews": 312,
+    "city": "Miami, FL"
+  },
+  {
+    "name": "Vitality Aesthetics",
+    "address": "789 5th Ave, New York, NY 10022",
+    "phone": "+12125553456",
+    "rating": 4.7,
+    "reviews": 189,
+    "city": "New York, NY"
+  },
+  {
+    "name": "Pure Skin Med Spa",
+    "address": "321 Oak Lawn Ave, Dallas, TX 75219",
+    "phone": "+12145554567",
+    "rating": 4.6,
+    "reviews": 156,
+    "city": "Dallas, TX"
+  },
+  {
+    "name": "Luxe Aesthetics",
+    "address": "654 Peachtree St, Atlanta, GA 30308",
+    "phone": "+14045555678",
+    "rating": 4.8,
+    "reviews": 201,
+    "city": "Atlanta, GA"
+  },
+  {
+    "name": "Desert Glow Med Spa",
+    "address": "987 Scottsdale Rd, Phoenix, AZ 85251",
+    "phone": "+16025556789",
+    "rating": 4.7,
+    "reviews": 178,
+    "city": "Phoenix, AZ"
+  },
+  {
+    "name": "Altitude Aesthetics",
+    "address": "147 Larimer St, Denver, CO 80202",
+    "phone": "+13035557890",
+    "rating": 4.9,
+    "reviews": 223,
+    "city": "Denver, CO"
+  },
+  {
+    "name": "Vegas Skin Boutique",
+    "address": "258 Las Vegas Blvd, Las Vegas, NV 89109",
+    "phone": "+17025558901",
+    "rating": 4.5,
+    "reviews": 134,
+    "city": "Las Vegas, NV"
+  },
+  {
+    "name": "Coastal Med Spa",
+    "address": "369 La Jolla Blvd, San Diego, CA 92037",
+    "phone": "+16195559012",
+    "rating": 4.8,
+    "reviews": 267,
+    "city": "San Diego, CA"
+  },
+  {
+    "name": "Magnolia Aesthetics",
+    "address": "741 Westheimer Rd, Houston, TX 77006",
+    "phone": "+17135550123",
+    "rating": 4.6,
+    "reviews": 145,
+    "city": "Houston, TX"
+  },
+  {
+    "name": "Beverly Hills Skin",
+    "address": "9876 Wilshire Blvd, Beverly Hills, CA 90210",
+    "phone": "+13105551111",
+    "rating": 4.9,
+    "reviews": 456,
+    "city": "Los Angeles, CA"
+  },
+  {
+    "name": "South Beach Aesthetics",
+    "address": "1234 Ocean Dr, Miami Beach, FL 33139",
+    "phone": "+13055552222",
+    "rating": 4.8,
+    "reviews": 289,
+    "city": "Miami, FL"
+  },
+  {
+    "name": "Manhattan Med Spa",
+    "address": "555 Madison Ave, New York, NY 10022",
+    "phone": "+12125553333",
+    "rating": 4.7,
+    "reviews": 334,
+    "city": "New York, NY"
+  },
+  {
+    "name": "Uptown Aesthetics",
+    "address": "2222 McKinney Ave, Dallas, TX 75201",
+    "phone": "+12145554444",
+    "rating": 4.8,
+    "reviews": 198,
+    "city": "Dallas, TX"
+  },
+  {
+    "name": "Buckhead Beauty Med Spa",
+    "address": "3333 Piedmont Rd, Atlanta, GA 30305",
+    "phone": "+14045555555",
+    "rating": 4.9,
+    "reviews": 276,
+    "city": "Atlanta, GA"
+  },
+  {
+    "name": "Scottsdale Skin Clinic",
+    "address": "4444 N Scottsdale Rd, Scottsdale, AZ 85251",
+    "phone": "+16025556666",
+    "rating": 4.7,
+    "reviews": 212,
+    "city": "Phoenix, AZ"
+  },
+  {
+    "name": "Cherry Creek Med Spa",
+    "address": "5555 E 1st Ave, Denver, CO 80206",
+    "phone": "+13035557777",
+    "rating": 4.8,
+    "reviews": 189,
+    "city": "Denver, CO"
+  },
+  {
+    "name": "Strip Aesthetics",
+    "address": "6666 S Las Vegas Blvd, Las Vegas, NV 89119",
+    "phone": "+17025558888",
+    "rating": 4.6,
+    "reviews": 156,
+    "city": "Las Vegas, NV"
+  },
+  {
+    "name": "Del Mar Med Spa",
+    "address": "7777 Camino Del Rio, San Diego, CA 92108",
+    "phone": "+16195559999",
+    "rating": 4.9,
+    "reviews": 234,
+    "city": "San Diego, CA"
+  },
+  {
+    "name": "River Oaks Aesthetics",
+    "address": "8888 San Felipe St, Houston, TX 77057",
+    "phone": "+17135550000",
+    "rating": 4.8,
+    "reviews": 267,
+    "city": "Houston, TX"
+  }
+]
