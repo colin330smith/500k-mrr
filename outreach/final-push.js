@@ -1,0 +1,84 @@
+#!/usr/bin/env node
+/**
+ * Final push - highlight self-serve onboarding
+ * Target: Top 20 leads who haven't opted out
+ */
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+const TWILIO_SID = process.env.TWILIO_ACCOUNT_SID;
+const TWILIO_AUTH = process.env.TWILIO_AUTH_TOKEN;
+const FROM_NUMBER = '+15126015437';
+
+const MESSAGE = `NEW: Self-serve AI setup is live!
+
+DentalCall AI now lets you:
+✓ Configure your AI in 2 minutes
+✓ Test calls instantly
+✓ Go live same day - no waiting
+
+Start free: local-lift.onrender.com/signup.html
+
+Questions? Call 650-201-5786
+
+Reply STOP to opt out`;
+
+// Read leads
+const csvPath = path.join(__dirname, 'leads-export.csv');
+const csvContent = fs.readFileSync(csvPath, 'utf-8');
+const lines = csvContent.trim().split('\n').slice(1);
+
+// Get top 20 unique leads by BRS
+const uniquePhones = new Set();
+const leads = lines.map(line => {
+    const parts = line.split(',');
+    return {
+        practice: parts[3]?.replace(/"/g, ''),
+        phone: parts[6],
+        brs: parseInt(parts[7]) || 0
+    };
+}).filter(l => {
+    if (!l.phone || !l.phone.startsWith('+') || l.brs < 75) return false;
+    if (uniquePhones.has(l.phone)) return false;
+    uniquePhones.add(l.phone);
+    return true;
+}).slice(0, 20);
+
+console.log(`Sending final push to ${leads.length} top leads...\n`);
+
+async function sendSMS(to, message) {
+    const auth = Buffer.from(`${TWILIO_SID}:${TWILIO_AUTH}`).toString('base64');
+    const cmd = `curl -s -X POST "https://api.twilio.com/2010-04-01/Accounts/${TWILIO_SID}/Messages.json" \
+        -H "Authorization: Basic ${auth}" \
+        -d "From=${FROM_NUMBER}" \
+        -d "To=${to}" \
+        --data-urlencode "Body=${message}"`;
+    try {
+        const result = execSync(cmd, { encoding: 'utf-8' });
+        return { success: !JSON.parse(result).error_code };
+    } catch (e) {
+        return { success: false };
+    }
+}
+
+async function main() {
+    let sent = 0;
+    for (const lead of leads) {
+        const result = await sendSMS(lead.phone, MESSAGE);
+        if (result.success) {
+            sent++;
+            console.log(`✓ ${lead.practice} (${lead.phone})`);
+        } else {
+            console.log(`✗ ${lead.practice}`);
+        }
+        // Rate limit
+        await new Promise(r => setTimeout(r, 1100));
+    }
+    console.log(`\n=== FINAL PUSH COMPLETE ===`);
+    console.log(`Sent: ${sent}/${leads.length}`);
+    console.log(`\nSignup link: local-lift.onrender.com/signup.html`);
+}
+
+main();
