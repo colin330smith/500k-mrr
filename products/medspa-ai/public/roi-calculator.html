@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free ROI Calculator for Med Spas | MedSpa RevAI</title>
+    <meta name="description" content="Calculate how much revenue your med spa loses to no-shows and slow lead response. Get your personalized ROI report in 30 seconds.">
+    <meta name="keywords" content="med spa ROI calculator, no show cost calculator, med spa revenue, aesthetic practice revenue">
+    <link rel="canonical" href="https://medspa-revai.onrender.com/roi-calculator.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free Med Spa ROI Calculator">
+    <meta property="og:description" content="See exactly how much revenue you're losing to no-shows and slow follow-up">
+    <meta property="og:type" content="website">
+
+    <script src="tracking.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #fff; min-height: 100vh; }
+
+        .header { padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.25rem; font-weight: 700; color: #e94560; text-decoration: none; }
+        .demo-btn { background: #e94560; color: #fff; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+
+        .hero { text-align: center; padding: 3rem 2rem; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { color: #888; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+        .calculator { max-width: 800px; margin: -2rem auto 3rem; padding: 0 1rem; }
+        .calc-card { background: #1a1a1a; border-radius: 16px; padding: 2rem; }
+
+        .input-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .input-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: #ccc; }
+        .input-group input, .input-group select { width: 100%; padding: 1rem; border: 1px solid #333; border-radius: 8px; background: #0a0a0a; color: #fff; font-size: 1rem; }
+        .input-group input:focus { outline: none; border-color: #e94560; }
+        .input-group small { color: #666; font-size: 0.8rem; margin-top: 0.25rem; display: block; }
+
+        .calculate-btn { width: 100%; padding: 1.25rem; background: #e94560; color: #fff; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; }
+        .calculate-btn:hover { background: #d63050; }
+
+        .results { display: none; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #333; }
+        .results.show { display: block; }
+
+        .results-header { text-align: center; margin-bottom: 2rem; }
+        .results-header h2 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .total-loss { font-size: 3rem; color: #e94560; font-weight: 700; }
+
+        .breakdown { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .breakdown-item { background: #0a0a0a; padding: 1.5rem; border-radius: 12px; text-align: center; }
+        .breakdown-item .value { font-size: 1.5rem; font-weight: 700; color: #e94560; }
+        .breakdown-item .label { color: #888; font-size: 0.9rem; margin-top: 0.25rem; }
+
+        .recovery-section { background: linear-gradient(135deg, #1a4a1a, #0a2a0a); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; }
+        .recovery-section h3 { color: #22c55e; margin-bottom: 1rem; }
+        .recovery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+        .recovery-item { text-align: center; }
+        .recovery-item .value { font-size: 1.25rem; font-weight: 700; color: #22c55e; }
+        .recovery-item .label { color: #888; font-size: 0.8rem; }
+
+        .cta-section { text-align: center; padding: 2rem; background: linear-gradient(135deg, #e94560, #d63050); border-radius: 12px; }
+        .cta-section h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .cta-section p { margin-bottom: 1.5rem; opacity: 0.9; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn-white { background: #fff; color: #e94560; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+        .btn-outline { border: 2px solid #fff; color: #fff; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+
+        .email-capture { display: none; margin-top: 2rem; padding: 2rem; background: #16213e; border-radius: 12px; text-align: center; }
+        .email-capture.show { display: block; }
+        .email-capture h3 { margin-bottom: 0.5rem; }
+        .email-capture p { color: #888; margin-bottom: 1rem; font-size: 0.9rem; }
+        .email-form { display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto; }
+        .email-form input { flex: 1; padding: 1rem; border: none; border-radius: 8px; }
+        .email-form button { background: #e94560; color: #fff; border: none; padding: 1rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+
+        footer { padding: 2rem; text-align: center; color: #666; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">MedSpa RevAI</a>
+        <a href="tel:+18334251223" class="demo-btn">Call Demo: (833) 425-1223</a>
+    </header>
+
+    <section class="hero">
+        <h1>How Much Revenue Are You Losing?</h1>
+        <p>Enter your numbers below. See your personalized ROI report in 30 seconds.</p>
+    </section>
+
+    <div class="calculator">
+        <div class="calc-card">
+            <div class="input-grid">
+                <div class="input-group">
+                    <label>Appointments per week</label>
+                    <input type="number" id="weeklyAppts" value="80" min="1">
+                    <small>Average med spa: 60-100</small>
+                </div>
+                <div class="input-group">
+                    <label>Average treatment value ($)</label>
+                    <input type="number" id="avgValue" value="350" min="50">
+                    <small>Include upsells</small>
+                </div>
+                <div class="input-group">
+                    <label>Current no-show rate (%)</label>
+                    <input type="number" id="noShowRate" value="18" min="0" max="100">
+                    <small>Industry average: 15-25%</small>
+                </div>
+                <div class="input-group">
+                    <label>New leads per month</label>
+                    <input type="number" id="monthlyLeads" value="50" min="0">
+                    <small>From all sources</small>
+                </div>
+                <div class="input-group">
+                    <label>Avg lead response time</label>
+                    <select id="responseTime">
+                        <option value="5">Under 5 minutes</option>
+                        <option value="30">5-30 minutes</option>
+                        <option value="60" selected>30-60 minutes</option>
+                        <option value="240">1-4 hours</option>
+                        <option value="1440">Same day</option>
+                        <option value="2880">Next day+</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Clients inactive 90+ days</label>
+                    <input type="number" id="lapsedClients" value="200" min="0">
+                    <small>Estimate from your CRM</small>
+                </div>
+            </div>
+
+            <button class="calculate-btn" onclick="calculateROI()">Calculate My Lost Revenue</button>
+
+            <div class="results" id="results">
+                <div class="results-header">
+                    <h2>You're Losing Approximately</h2>
+                    <div class="total-loss" id="totalLoss">$0</div>
+                    <p style="color: #888;">per month in preventable revenue loss</p>
+                </div>
+
+                <div class="breakdown">
+                    <div class="breakdown-item">
+                        <div class="value" id="noShowLoss">$0</div>
+                        <div class="label">No-shows & cancellations</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="value" id="leadLoss">$0</div>
+                        <div class="label">Slow lead response</div>
+                    </div>
+                    <div class="breakdown-item">
+                        <div class="value" id="lapsedLoss">$0</div>
+                        <div class="label">Lapsed clients</div>
+                    </div>
+                </div>
+
+                <div class="recovery-section">
+                    <h3>With MedSpa RevAI, You Could Recover:</h3>
+                    <div class="recovery-grid">
+                        <div class="recovery-item">
+                            <div class="value" id="recoverNoShow">$0</div>
+                            <div class="label">No-shows recovered (70%)</div>
+                        </div>
+                        <div class="recovery-item">
+                            <div class="value" id="recoverLead">$0</div>
+                            <div class="label">Leads converted (5 min response)</div>
+                        </div>
+                        <div class="recovery-item">
+                            <div class="value" id="recoverLapsed">$0</div>
+                            <div class="label">Lapsed clients reactivated</div>
+                        </div>
+                        <div class="recovery-item">
+                            <div class="value" id="totalRecovery">$0</div>
+                            <div class="label">Total monthly recovery</div>
+                        </div>
+                    </div>
+                    <p style="text-align: center; margin-top: 1rem; color: #22c55e; font-size: 1.25rem; font-weight: 700;">
+                        ROI: <span id="roiMultiple">0</span>x your investment
+                    </p>
+                </div>
+
+                <div class="cta-section">
+                    <h3>Ready to Stop Losing Money?</h3>
+                    <p>Try our AI demo right now - no signup required</p>
+                    <div class="cta-buttons">
+                        <a href="tel:+18334251223" class="btn-white">Call Demo: (833) 425-1223</a>
+                        <a href="signup.html" class="btn-outline">Start 14-Day Free Trial</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="email-capture" id="emailCapture">
+                <h3>Get Your Full Report</h3>
+                <p>Enter your email to receive a detailed PDF with strategies to recover this revenue</p>
+                <form class="email-form" onsubmit="captureEmail(event)">
+                    <input type="email" id="captureEmail" placeholder="you@yourspa.com" required>
+                    <button type="submit">Send Report</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MedSpa RevAI. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function calculateROI() {
+            const weeklyAppts = parseInt(document.getElementById('weeklyAppts').value) || 80;
+            const avgValue = parseInt(document.getElementById('avgValue').value) || 350;
+            const noShowRate = parseInt(document.getElementById('noShowRate').value) || 18;
+            const monthlyLeads = parseInt(document.getElementById('monthlyLeads').value) || 50;
+            const responseTime = parseInt(document.getElementById('responseTime').value) || 60;
+            const lapsedClients = parseInt(document.getElementById('lapsedClients').value) || 200;
+
+            // Calculate losses
+            const monthlyAppts = weeklyAppts * 4.3;
+            const noShowLoss = Math.round(monthlyAppts * (noShowRate / 100) * avgValue);
+
+            // Lead conversion drops based on response time
+            // 5 min = 80% conversion, each doubling of time = -15%
+            const baseConversion = 0.30; // 30% baseline
+            const timeMultiplier = responseTime <= 5 ? 1 : responseTime <= 30 ? 0.7 : responseTime <= 60 ? 0.5 : responseTime <= 240 ? 0.3 : 0.15;
+            const lostLeads = monthlyLeads * (1 - timeMultiplier) * baseConversion;
+            const leadLoss = Math.round(lostLeads * avgValue * 2); // LTV multiplier
+
+            // Lapsed client opportunity cost (assume 5% could be reactivated monthly)
+            const lapsedLoss = Math.round(lapsedClients * 0.05 * avgValue);
+
+            const totalLoss = noShowLoss + leadLoss + lapsedLoss;
+
+            // Calculate recovery with RevAI
+            const recoverNoShow = Math.round(noShowLoss * 0.70); // 70% no-show recovery
+            const recoverLead = Math.round(leadLoss * 0.80); // 5 min response = recover 80%
+            const recoverLapsed = Math.round(lapsedLoss * 0.60); // 60% reactivation rate
+            const totalRecovery = recoverNoShow + recoverLead + recoverLapsed;
+
+            const roiMultiple = Math.round((totalRecovery / 497) * 10) / 10;
+
+            // Update UI
+            document.getElementById('totalLoss').textContent = '$' + totalLoss.toLocaleString();
+            document.getElementById('noShowLoss').textContent = '$' + noShowLoss.toLocaleString();
+            document.getElementById('leadLoss').textContent = '$' + leadLoss.toLocaleString();
+            document.getElementById('lapsedLoss').textContent = '$' + lapsedLoss.toLocaleString();
+
+            document.getElementById('recoverNoShow').textContent = '+$' + recoverNoShow.toLocaleString();
+            document.getElementById('recoverLead').textContent = '+$' + recoverLead.toLocaleString();
+            document.getElementById('recoverLapsed').textContent = '+$' + recoverLapsed.toLocaleString();
+            document.getElementById('totalRecovery').textContent = '+$' + totalRecovery.toLocaleString();
+            document.getElementById('roiMultiple').textContent = roiMultiple;
+
+            document.getElementById('results').classList.add('show');
+            document.getElementById('emailCapture').classList.add('show');
+
+            // Track
+            if (window.MedSpaTrack) {
+                MedSpaTrack.roiCalculator({ monthlyRecovery: totalRecovery });
+            }
+
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function captureEmail(e) {
+            e.preventDefault();
+            const email = document.getElementById('captureEmail').value;
+
+            // Track lead
+            if (window.MedSpaTrack) {
+                MedSpaTrack.leadCapture(email, 'roi_calculator');
+            }
+
+            // Store in localStorage for now (would send to backend in production)
+            const leads = JSON.parse(localStorage.getItem('medspa_leads') || '[]');
+            leads.push({
+                email,
+                source: 'roi_calculator',
+                timestamp: new Date().toISOString(),
+                data: {
+                    weeklyAppts: document.getElementById('weeklyAppts').value,
+                    avgValue: document.getElementById('avgValue').value,
+                    noShowRate: document.getElementById('noShowRate').value
+                }
+            });
+            localStorage.setItem('medspa_leads', JSON.stringify(leads));
+
+            // Show thank you
+            document.getElementById('emailCapture').innerHTML = `
+                <h3 style="color: #22c55e;">Report Sent!</h3>
+                <p>Check your inbox. In the meantime, try our live demo:</p>
+                <a href="tel:+18334251223" style="display: inline-block; margin-top: 1rem; background: #e94560; color: #fff; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600;">Call (833) 425-1223</a>
+            `;
+        }
+    </script>
+</body>
+</html>

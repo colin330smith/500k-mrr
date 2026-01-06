@@ -22,6 +22,43 @@ const twilioClient = twilio(TWILIO_SID, TWILIO_TOKEN);
 
 // In-memory store (replace with Supabase in production)
 const customers = new Map();
+const leads = new Map();
+
+// Lead capture endpoint
+app.post('/api/leads', async (req, res) => {
+    try {
+        const { email, source, data } = req.body;
+
+        if (!email) {
+            return res.status(400).json({ error: 'Email required' });
+        }
+
+        const lead = {
+            email,
+            source: source || 'website',
+            data: data || {},
+            createdAt: new Date().toISOString(),
+            status: 'new'
+        };
+
+        leads.set(email, lead);
+        console.log(`New lead captured: ${email} from ${source}`);
+
+        // TODO: Send to Resend for email nurture sequence
+        // TODO: Send to Slack/webhook for notifications
+
+        res.json({ success: true, message: 'Lead captured' });
+    } catch (error) {
+        console.error('Lead capture error:', error);
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// Get all leads (admin endpoint)
+app.get('/api/leads', (req, res) => {
+    const allLeads = Array.from(leads.values());
+    res.json({ leads: allLeads, count: allLeads.length });
+});
 
 // Create Stripe Checkout Session
 app.post('/api/checkout', async (req, res) => {
