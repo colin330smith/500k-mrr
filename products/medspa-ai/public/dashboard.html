@@ -135,14 +135,46 @@
         async function loadDashboard() {
             // If we have a session ID, we just completed checkout
             if (sessionId) {
-                document.getElementById('business-name').textContent = 'Setting up your AI...';
-                document.getElementById('ai-phone').textContent = 'Provisioning...';
+                document.getElementById('business-name').textContent = '🎉 Setting up your AI...';
+                document.getElementById('ai-phone').textContent = 'Provisioning your number...';
 
                 // Poll until provisioning is complete
-                setTimeout(() => {
-                    document.getElementById('ai-phone').textContent = '+1 (833) 425-1223';
-                    document.getElementById('business-name').textContent = 'Welcome to MedSpa RevAI!';
-                }, 2000);
+                const pollForCustomer = async (attempts = 0) => {
+                    try {
+                        const response = await fetch(`${API_URL}/api/session/${sessionId}`);
+                        const data = await response.json();
+
+                        if (data.success && data.customer) {
+                            // Customer is ready!
+                            localStorage.setItem('medspa_email', data.customer.email);
+                            document.getElementById('user-email').textContent = data.customer.email;
+                            document.getElementById('business-name').textContent = `🎉 Welcome, ${data.customer.businessName}!`;
+                            document.getElementById('ai-phone').textContent = formatPhone(data.customer.aiPhoneNumber);
+
+                            // Show success animation
+                            document.querySelector('.phone-number').style.animation = 'pulse 0.5s ease';
+
+                            // Hide setup steps after 30 seconds
+                            setTimeout(() => {
+                                document.getElementById('setup-steps').style.display = 'none';
+                            }, 30000);
+                        } else if (attempts < 30) {
+                            // Still provisioning, retry in 2 seconds
+                            setTimeout(() => pollForCustomer(attempts + 1), 2000);
+                        } else {
+                            // Timeout - show demo number for now
+                            document.getElementById('ai-phone').textContent = '+1 (833) 425-1223';
+                            document.getElementById('business-name').textContent = 'Welcome to MedSpa RevAI!';
+                        }
+                    } catch (error) {
+                        console.error('Poll error:', error);
+                        if (attempts < 30) {
+                            setTimeout(() => pollForCustomer(attempts + 1), 2000);
+                        }
+                    }
+                };
+
+                pollForCustomer();
                 return;
             }
 

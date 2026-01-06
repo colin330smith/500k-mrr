@@ -206,17 +206,35 @@ Transfer to ${businessPhone} for complex questions.`
     }
 
     // 4. Store customer data
-    customers.set(customer_email, {
+    const customerData = {
         email: customer_email,
         businessName,
         businessPhone,
         assistantId: assistant.id,
         aiPhoneNumber: phoneNumber,
-        createdAt: new Date().toISOString()
-    });
+        createdAt: new Date().toISOString(),
+        status: 'active',
+        trialEnds: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString()
+    };
+    customers.set(customer_email, customerData);
 
-    console.log(`Customer provisioned: ${customer_email}`);
-    return { assistant, phoneNumber };
+    // 5. Send instant welcome SMS with their new AI phone number
+    if (phoneNumber && businessPhone) {
+        try {
+            const formattedAINumber = phoneNumber.replace(/(\+1)(\d{3})(\d{3})(\d{4})/, '$1 ($2) $3-$4');
+            await twilioClient.messages.create({
+                body: `🎉 Welcome to MedSpa RevAI!\n\nYour AI receptionist is LIVE!\n\n📞 Your AI Phone Number: ${formattedAINumber}\n\nForward your main line to this number, or add it to your website. Your AI will answer 24/7.\n\nTest it now - call your new number and ask about Botox pricing!\n\nQuestions? Reply to this text.`,
+                from: process.env.TWILIO_PHONE || '+18334251223',
+                to: businessPhone
+            });
+            console.log(`Welcome SMS sent to ${businessPhone}`);
+        } catch (smsError) {
+            console.error('Welcome SMS failed:', smsError.message);
+        }
+    }
+
+    console.log(`Customer provisioned: ${customer_email} with AI number ${phoneNumber}`);
+    return { assistant, phoneNumber, customerData };
 }
 
 // Get customer dashboard data
@@ -236,6 +254,49 @@ app.get('/api/customer/:email', async (req, res) => {
         ...customer,
         calls: calls || []
     });
+});
+
+// Lookup customer by Stripe session ID (for success page)
+app.get('/api/session/:sessionId', async (req, res) => {
+    try {
+        const session = await stripe.checkout.sessions.retrieve(req.params.sessionId);
+        const customer = customers.get(session.customer_email);
+
+        if (customer) {
+            res.json({
+                success: true,
+                customer: {
+                    email: customer.email,
+                    businessName: customer.businessName,
+                    aiPhoneNumber: customer.aiPhoneNumber,
+                    trialEnds: customer.trialEnds,
+                    status: customer.status
+                }
+            });
+        } else {
+            // Customer might still be provisioning
+            res.json({
+                success: true,
+                provisioning: true,
+                email: session.customer_email
+            });
+        }
+    } catch (error) {
+        console.error('Session lookup error:', error);
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// Get all customers (admin)
+app.get('/api/customers', (req, res) => {
+    const allCustomers = Array.from(customers.values()).map(c => ({
+        email: c.email,
+        businessName: c.businessName,
+        aiPhoneNumber: c.aiPhoneNumber,
+        status: c.status,
+        createdAt: c.createdAt
+    }));
+    res.json({ customers: allCustomers, count: allCustomers.length });
 });
 
 // Health check
