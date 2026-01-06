@@ -122,7 +122,10 @@
     </div>
 
     <script>
-        const API_URL = 'https://medspa-revai-api.onrender.com';
+        // Auto-detect API URL based on environment
+        const API_URL = window.location.hostname === 'localhost'
+            ? 'http://localhost:3000'
+            : 'https://medspa-revai-api.onrender.com';
 
         // Get email from URL or localStorage
         const urlParams = new URLSearchParams(window.location.search);
@@ -137,7 +140,7 @@
 
                 // Poll until provisioning is complete
                 setTimeout(() => {
-                    document.getElementById('ai-phone').textContent = '+1 (972) 845-8338';
+                    document.getElementById('ai-phone').textContent = '+1 (833) 425-1223';
                     document.getElementById('business-name').textContent = 'Welcome to MedSpa RevAI!';
                 }, 2000);
                 return;
@@ -147,7 +150,7 @@
                 // Demo mode
                 document.getElementById('user-email').textContent = 'Demo Mode';
                 document.getElementById('business-name').textContent = 'Welcome to MedSpa RevAI!';
-                document.getElementById('ai-phone').textContent = '+1 (972) 845-8338';
+                document.getElementById('ai-phone').textContent = '+1 (833) 425-1223';
                 loadDemoCalls();
                 return;
             }
@@ -219,7 +222,7 @@
         }
 
         function formatPhone(phone) {
-            if (!phone) return '+1 (972) 845-8338';
+            if (!phone) return '+1 (833) 425-1223';
             const cleaned = phone.replace(/\D/g, '');
             return `+1 (${cleaned.slice(1, 4)}) ${cleaned.slice(4, 7)}-${cleaned.slice(7)}`;
         }

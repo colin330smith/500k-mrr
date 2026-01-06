@@ -4,7 +4,11 @@ const Stripe = require('stripe');
 const twilio = require('twilio');
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: true }));
+
+// Stripe webhook needs raw body - must be before express.json()
+app.post('/api/webhook', express.raw({ type: 'application/json' }), handleWebhook);
+
 app.use(express.json());
 
 // Environment variables
@@ -55,24 +59,30 @@ app.post('/api/checkout', async (req, res) => {
     }
 });
 
-// Stripe Webhook - Provision after payment
-app.post('/api/webhook', express.raw({ type: 'application/json' }), async (req, res) => {
+// Webhook handler function (defined here, registered at top before json middleware)
+async function handleWebhook(req, res) {
     const sig = req.headers['stripe-signature'];
     let event;
 
     try {
         event = stripe.webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
     } catch (err) {
+        console.error('Webhook signature verification failed:', err.message);
         return res.status(400).send(`Webhook Error: ${err.message}`);
     }
 
     if (event.type === 'checkout.session.completed') {
         const session = event.data.object;
-        await provisionCustomer(session);
+        try {
+            await provisionCustomer(session);
+            console.log('Customer provisioned successfully');
+        } catch (err) {
+            console.error('Provisioning error:', err);
+        }
     }
 
     res.json({ received: true });
-});
+}
 
 // Provision customer with Vapi assistant and phone number
 async function provisionCustomer(session) {
