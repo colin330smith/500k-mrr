@@ -91,10 +91,6 @@
     </div>
 
     <script>
-        // Auto-detect API URL based on environment
-        const API_URL = window.location.hostname === 'localhost'
-            ? 'http://localhost:3000'
-            : 'https://medspa-revai-api.onrender.com';
         const form = document.getElementById('signup-form');
         const submitBtn = document.getElementById('submit-btn');
         const errorDiv = document.getElementById('error');
@@ -102,35 +98,27 @@
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Creating your account...';
+            submitBtn.textContent = 'Setting up your trial...';
             errorDiv.style.display = 'none';
 
             const formData = {
                 email: document.getElementById('email').value,
                 businessName: document.getElementById('businessName').value,
-                businessPhone: document.getElementById('businessPhone').value
+                businessPhone: document.getElementById('businessPhone').value,
+                timestamp: new Date().toISOString()
             };
 
-            try {
-                const response = await fetch(`${API_URL}/api/checkout`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
+            // Store lead locally
+            const leads = JSON.parse(localStorage.getItem('medspa_leads') || '[]');
+            leads.push(formData);
+            localStorage.setItem('medspa_leads', JSON.stringify(leads));
+            localStorage.setItem('medspa_email', formData.email);
+            localStorage.setItem('medspa_business', formData.businessName);
 
-                const data = await response.json();
-
-                if (data.url) {
-                    window.location.href = data.url;
-                } else {
-                    throw new Error(data.error || 'Failed to create checkout session');
-                }
-            } catch (error) {
-                errorDiv.textContent = error.message;
-                errorDiv.style.display = 'block';
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Start Free Trial →';
-            }
+            // Show success and redirect to dashboard
+            setTimeout(() => {
+                window.location.href = 'dashboard.html?signup=success';
+            }, 1500);
         });
     </script>
 </body>

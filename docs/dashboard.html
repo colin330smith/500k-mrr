@@ -127,12 +127,51 @@
             ? 'http://localhost:3000'
             : 'https://medspa-revai-api.onrender.com';
 
-        // Get email from URL or localStorage
+        // Get params from URL or localStorage
         const urlParams = new URLSearchParams(window.location.search);
         const sessionId = urlParams.get('session_id');
+        const signupSuccess = urlParams.get('signup');
         let customerEmail = localStorage.getItem('medspa_email');
+        let businessName = localStorage.getItem('medspa_business');
 
         async function loadDashboard() {
+            // Handle new signup
+            if (signupSuccess === 'success') {
+                document.getElementById('user-email').textContent = customerEmail || 'New User';
+                document.getElementById('business-name').textContent = `🎉 Welcome, ${businessName || 'to MedSpa RevAI'}!`;
+                document.getElementById('ai-phone').textContent = '+1 (833) 425-1223';
+
+                // Update setup steps for new signups
+                document.querySelector('.setup-steps h3').textContent = '🎉 Thanks for signing up!';
+                document.querySelector('.setup-steps').innerHTML = `
+                    <h3 style="color: #22c55e;">🎉 Thanks for signing up!</h3>
+                    <p style="color: #ccc; margin-bottom: 1rem;">We're setting up your custom AI receptionist. In the meantime:</p>
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Try our demo AI right now</strong>
+                            <span>Call <a href="tel:+18334251223" style="color: #e94560; font-weight: bold;">(833) 425-1223</a> and ask about Botox pricing</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>We'll text you within 24 hours</strong>
+                            <span>With your personal AI phone number and setup instructions</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Questions?</strong>
+                            <span>Reply to any text from us or email support@medsparevai.com</span>
+                        </div>
+                    </div>
+                `;
+                loadDemoCalls();
+                return;
+            }
+
             // If we have a session ID, we just completed checkout
             if (sessionId) {
                 document.getElementById('business-name').textContent = '🎉 Setting up your AI...';
