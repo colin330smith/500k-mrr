@@ -108,17 +108,20 @@
                 timestamp: new Date().toISOString()
             };
 
-            // Store lead locally
+            // Store lead locally for tracking
             const leads = JSON.parse(localStorage.getItem('medspa_leads') || '[]');
             leads.push(formData);
             localStorage.setItem('medspa_leads', JSON.stringify(leads));
             localStorage.setItem('medspa_email', formData.email);
             localStorage.setItem('medspa_business', formData.businessName);
 
-            // Show success and redirect to dashboard
+            // Redirect to Stripe payment link with prefilled data
+            const stripeUrl = new URL('https://buy.stripe.com/28E5kDdWj2aDebD7NigQE00');
+            stripeUrl.searchParams.set('prefilled_email', formData.email);
+
             setTimeout(() => {
-                window.location.href = 'dashboard.html?signup=success';
-            }, 1500);
+                window.location.href = stripeUrl.toString();
+            }, 500);
         });
     </script>
 </body>
