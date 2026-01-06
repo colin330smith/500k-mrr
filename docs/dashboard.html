@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | MedSpa RevAI</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #fff; min-height: 100vh; }
+        .header { background: #1a1a1a; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; }
+        .logo { font-size: 1.25rem; font-weight: 700; color: #e94560; }
+        .user-info { color: #888; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .welcome { margin-bottom: 2rem; }
+        .welcome h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .welcome p { color: #888; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .stat-card { background: #1a1a1a; padding: 1.5rem; border-radius: 12px; }
+        .stat-card .label { color: #888; font-size: 0.875rem; margin-bottom: 0.5rem; }
+        .stat-card .value { font-size: 2rem; font-weight: 700; }
+        .stat-card .value.highlight { color: #e94560; }
+        .phone-number { background: linear-gradient(135deg, #e94560, #d63050); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; }
+        .phone-number h3 { margin-bottom: 0.5rem; font-size: 1rem; opacity: 0.9; }
+        .phone-number .number { font-size: 2.5rem; font-weight: 700; letter-spacing: 2px; }
+        .phone-number p { margin-top: 1rem; opacity: 0.8; font-size: 0.9rem; }
+        .section { background: #1a1a1a; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; }
+        .section h2 { font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .call-list { list-style: none; }
+        .call-item { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid #333; }
+        .call-item:last-child { border-bottom: none; }
+        .call-info { display: flex; flex-direction: column; gap: 0.25rem; }
+        .call-info .caller { font-weight: 500; }
+        .call-info .time { color: #888; font-size: 0.875rem; }
+        .call-duration { color: #22c55e; font-weight: 500; }
+        .call-status { padding: 0.25rem 0.75rem; border-radius: 50px; font-size: 0.75rem; font-weight: 500; }
+        .call-status.completed { background: #22c55e20; color: #22c55e; }
+        .call-status.missed { background: #e9456020; color: #e94560; }
+        .empty-state { text-align: center; padding: 3rem; color: #666; }
+        .loading { text-align: center; padding: 3rem; color: #888; }
+        .quick-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        .action-card { background: #1a1a1a; padding: 1.5rem; border-radius: 12px; cursor: pointer; transition: transform 0.2s; }
+        .action-card:hover { transform: translateY(-2px); }
+        .action-card h3 { margin-bottom: 0.5rem; }
+        .action-card p { color: #888; font-size: 0.9rem; }
+        .setup-steps { background: #1a1a2e; border: 1px solid #e94560; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; }
+        .setup-steps h3 { color: #e94560; margin-bottom: 1rem; }
+        .step { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
+        .step-number { background: #e94560; color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem; font-weight: 600; flex-shrink: 0; }
+        .step-content { flex: 1; }
+        .step-content strong { display: block; margin-bottom: 0.25rem; }
+        .step-content span { color: #888; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">MedSpa RevAI</div>
+        <div class="user-info" id="user-email">Loading...</div>
+    </header>
+
+    <div class="container">
+        <div class="welcome">
+            <h1 id="business-name">Welcome!</h1>
+            <p>Your AI receptionist is ready to take calls.</p>
+        </div>
+
+        <div class="phone-number">
+            <h3>Your AI Phone Number</h3>
+            <div class="number" id="ai-phone">Loading...</div>
+            <p>Forward your calls here or use this as your main business line. AI answers 24/7.</p>
+        </div>
+
+        <div class="setup-steps" id="setup-steps">
+            <h3>🚀 Quick Setup (2 minutes)</h3>
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <strong>Test your AI</strong>
+                    <span>Call the number above and try: "How much is Botox?"</span>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <strong>Forward your calls</strong>
+                    <span>Set up call forwarding from your current number, or use this as your new number.</span>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <strong>Update your website</strong>
+                    <span>Add this number to your website and Google Business listing.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="label">Total Calls</div>
+                <div class="value" id="total-calls">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Appointments Booked</div>
+                <div class="value highlight" id="appointments">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Avg Call Duration</div>
+                <div class="value" id="avg-duration">0:00</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Revenue Recovered</div>
+                <div class="value highlight" id="revenue">$0</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📞 Recent Calls</h2>
+            <ul class="call-list" id="call-list">
+                <li class="loading">Loading calls...</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Auto-detect API URL based on environment
+        const API_URL = window.location.hostname === 'localhost'
+            ? 'http://localhost:3000'
+            : 'https://medspa-revai-api.onrender.com';
+
+        // Get email from URL or localStorage
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get('session_id');
+        let customerEmail = localStorage.getItem('medspa_email');
+
+        async function loadDashboard() {
+            // If we have a session ID, we just completed checkout
+            if (sessionId) {
+                document.getElementById('business-name').textContent = '🎉 Setting up your AI...';
+                document.getElementById('ai-phone').textContent = 'Provisioning your number...';
+
+                // Poll until provisioning is complete
+                const pollForCustomer = async (attempts = 0) => {
+                    try {
+                        const response = await fetch(`${API_URL}/api/session/${sessionId}`);
+                        const data = await response.json();
+
+                        if (data.success && data.customer) {
+                            // Customer is ready!
+                            localStorage.setItem('medspa_email', data.customer.email);
+                            document.getElementById('user-email').textContent = data.customer.email;
+                            document.getElementById('business-name').textContent = `🎉 Welcome, ${data.customer.businessName}!`;
+                            document.getElementById('ai-phone').textContent = formatPhone(data.customer.aiPhoneNumber);
+
+                            // Show success animation
+                            document.querySelector('.phone-number').style.animation = 'pulse 0.5s ease';
+
+                            // Hide setup steps after 30 seconds
+                            setTimeout(() => {
+                                document.getElementById('setup-steps').style.display = 'none';
+                            }, 30000);
+                        } else if (attempts < 30) {
+                            // Still provisioning, retry in 2 seconds
+                            setTimeout(() => pollForCustomer(attempts + 1), 2000);
+                        } else {
+                            // Timeout - show demo number for now
+                            document.getElementById('ai-phone').textContent = '+1 (833) 425-1223';
+                            document.getElementById('business-name').textContent = 'Welcome to MedSpa RevAI!';
+                        }
+                    } catch (error) {
+                        console.error('Poll error:', error);
+                        if (attempts < 30) {
+                            setTimeout(() => pollForCustomer(attempts + 1), 2000);
+                        }
+                    }
+                };
+
+                pollForCustomer();
+                return;
+            }
+
+            if (!customerEmail) {
+                // Demo mode
+                document.getElementById('user-email').textContent = 'Demo Mode';
+                document.getElementById('business-name').textContent = 'Welcome to MedSpa RevAI!';
+                document.getElementById('ai-phone').textContent = '+1 (833) 425-1223';
+                loadDemoCalls();
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/api/customer/${customerEmail}`);
+                const data = await response.json();
+
+                document.getElementById('user-email').textContent = data.email;
+                document.getElementById('business-name').textContent = `Welcome, ${data.businessName}!`;
+                document.getElementById('ai-phone').textContent = formatPhone(data.aiPhoneNumber);
+
+                if (data.calls && data.calls.length > 0) {
+                    renderCalls(data.calls);
+                    updateStats(data.calls);
+                } else {
+                    loadDemoCalls();
+                }
+            } catch (error) {
+                console.error('Error loading dashboard:', error);
+                loadDemoCalls();
+            }
+        }
+
+        function loadDemoCalls() {
+            const callList = document.getElementById('call-list');
+            callList.innerHTML = `
+                <li class="empty-state">
+                    <p>No calls yet. Test your AI by calling the number above!</p>
+                </li>
+            `;
+        }
+
+        function renderCalls(calls) {
+            const callList = document.getElementById('call-list');
+
+            if (calls.length === 0) {
+                loadDemoCalls();
+                return;
+            }
+
+            callList.innerHTML = calls.slice(0, 10).map(call => `
+                <li class="call-item">
+                    <div class="call-info">
+                        <span class="caller">${call.customer?.number || 'Unknown'}</span>
+                        <span class="time">${formatDate(call.createdAt)}</span>
+                    </div>
+                    <span class="call-duration">${formatDuration(call.duration)}</span>
+                    <span class="call-status ${call.status === 'ended' ? 'completed' : 'missed'}">
+                        ${call.status === 'ended' ? 'Completed' : call.status}
+                    </span>
+                </li>
+            `).join('');
+        }
+
+        function updateStats(calls) {
+            document.getElementById('total-calls').textContent = calls.length;
+
+            const totalDuration = calls.reduce((sum, call) => sum + (call.duration || 0), 0);
+            const avgDuration = calls.length > 0 ? totalDuration / calls.length : 0;
+            document.getElementById('avg-duration').textContent = formatDuration(avgDuration);
+
+            // Estimate appointments (calls > 2 min likely booked)
+            const appointments = calls.filter(c => c.duration > 120).length;
+            document.getElementById('appointments').textContent = appointments;
+
+            // Estimate revenue ($350 avg per appointment)
+            document.getElementById('revenue').textContent = `$${(appointments * 350).toLocaleString()}`;
+        }
+
+        function formatPhone(phone) {
+            if (!phone) return '+1 (833) 425-1223';
+            const cleaned = phone.replace(/\D/g, '');
+            return `+1 (${cleaned.slice(1, 4)}) ${cleaned.slice(4, 7)}-${cleaned.slice(7)}`;
+        }
+
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+
+        function formatDuration(seconds) {
+            if (!seconds) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        loadDashboard();
+    </script>
+</body>
+</html>

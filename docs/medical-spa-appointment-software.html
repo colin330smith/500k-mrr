@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Spa Appointment Software with AI | MedSpa RevAI</title>
+    <meta name="description" content="Medical spa appointment software that answers calls, books appointments, and recovers no-shows with AI. Integrates with your existing calendar. $497/mo.">
+    <meta name="keywords" content="medical spa software, medspa appointment system, aesthetic clinic scheduling, med spa booking software">
+    <link rel="canonical" href="https://medspa-revai.onrender.com/medical-spa-appointment-software.html">
+    <script src="tracking.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #fff; }
+        .header { padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.25rem; font-weight: 700; color: #e94560; text-decoration: none; }
+        .header-cta { display: flex; gap: 1rem; align-items: center; }
+        .demo-link { color: #e94560; text-decoration: none; font-weight: 600; }
+        .header-btn { background: #e94560; color: #fff; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+
+        .hero { padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+        .hero h1 { font-size: 2.75rem; max-width: 900px; margin: 0 auto 1rem; line-height: 1.2; }
+        .hero h1 span { color: #e94560; }
+        .hero p { color: #888; font-size: 1.2rem; max-width: 650px; margin: 0 auto 2rem; }
+        .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { background: #e94560; color: #fff; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+        .btn-secondary { border: 2px solid #e94560; color: #e94560; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+
+        .comparison { padding: 4rem 2rem; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .section-title { font-size: 2rem; text-align: center; margin-bottom: 2.5rem; }
+        .comparison-table { width: 100%; border-collapse: collapse; background: #1a1a1a; border-radius: 12px; overflow: hidden; }
+        .comparison-table th, .comparison-table td { padding: 1rem; text-align: left; border-bottom: 1px solid #333; }
+        .comparison-table th { background: #0a0a0a; color: #e94560; }
+        .comparison-table td:first-child { font-weight: 600; }
+        .check { color: #22c55e; }
+        .x { color: #666; }
+
+        .features { padding: 4rem 2rem; background: #111; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .feature-card { background: #1a1a1a; padding: 2rem; border-radius: 12px; }
+        .feature-card .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .feature-card h3 { margin-bottom: 0.5rem; }
+        .feature-card p { color: #888; font-size: 0.95rem; }
+
+        .integrations { padding: 4rem 2rem; text-align: center; }
+        .integration-logos { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+        .integration-logo { background: #1a1a1a; padding: 1.5rem 2rem; border-radius: 8px; font-weight: 600; color: #888; }
+
+        .pricing { padding: 4rem 2rem; background: #111; text-align: center; }
+        .price-card { background: linear-gradient(135deg, #e94560, #d63050); max-width: 400px; margin: 0 auto; padding: 2.5rem; border-radius: 16px; }
+        .price-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .price { font-size: 3.5rem; font-weight: 700; }
+        .price span { font-size: 1.25rem; font-weight: 400; }
+        .vs-price { margin: 1rem 0; opacity: 0.8; }
+        .price-features { text-align: left; margin: 1.5rem 0; }
+        .price-features li { padding: 0.4rem 0; list-style: none; }
+        .price-features li:before { content: "✓ "; }
+        .price-cta { width: 100%; padding: 1rem; background: #fff; color: #e94560; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; text-decoration: none; display: block; text-align: center; }
+
+        .final-cta { padding: 4rem 2rem; text-align: center; }
+        .phone-box { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 2rem; border-radius: 16px; max-width: 500px; margin: 0 auto; }
+        .phone-box h2 { margin-bottom: 0.5rem; }
+        .phone-box p { color: #888; margin-bottom: 1.5rem; }
+        .phone-number { font-size: 2rem; font-weight: 700; color: #e94560; text-decoration: none; }
+
+        footer { padding: 2rem; text-align: center; color: #666; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .comparison-table { font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">MedSpa RevAI</a>
+        <div class="header-cta">
+            <a href="tel:+18334251223" class="demo-link">Demo: (833) 425-1223</a>
+            <a href="signup.html" class="header-btn">Start Free Trial</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Appointment Software That <span>Answers Your Phone</span></h1>
+        <p>Most med spa software just stores appointments. Ours books them automatically, recovers no-shows, and answers calls 24/7.</p>
+        <div class="hero-cta">
+            <a href="signup.html" class="btn-primary">Start 14-Day Free Trial</a>
+            <a href="tel:+18334251223" class="btn-secondary">Try Demo: (833) 425-1223</a>
+        </div>
+    </section>
+
+    <section class="comparison">
+        <div class="container">
+            <h2 class="section-title">MedSpa RevAI vs Traditional Software</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>MedSpa RevAI</th>
+                        <th>Boulevard / Zenoti / Mangomint</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Appointment scheduling</td>
+                        <td class="check">✓</td>
+                        <td class="check">✓</td>
+                    </tr>
+                    <tr>
+                        <td>AI answers phone calls 24/7</td>
+                        <td class="check">✓</td>
+                        <td class="x">✗</td>
+                    </tr>
+                    <tr>
+                        <td>Automatic no-show recovery</td>
+                        <td class="check">✓</td>
+                        <td class="x">✗</td>
+                    </tr>
+                    <tr>
+                        <td>Responds to leads in 5 minutes</td>
+                        <td class="check">✓</td>
+                        <td class="x">✗</td>
+                    </tr>
+                    <tr>
+                        <td>Reactivates lapsed clients</td>
+                        <td class="check">✓</td>
+                        <td class="x">✗</td>
+                    </tr>
+                    <tr>
+                        <td>Answers pricing questions</td>
+                        <td class="check">✓</td>
+                        <td class="x">✗</td>
+                    </tr>
+                    <tr>
+                        <td>Works after hours</td>
+                        <td class="check">✓ 24/7</td>
+                        <td class="x">✗</td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td>$497/mo</td>
+                        <td>$200-500/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Revenue recovered</strong></td>
+                        <td><strong>$8,750/mo avg</strong></td>
+                        <td>$0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">What Our AI Does That Software Can't</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">📞</div>
+                    <h3>Answers Every Call</h3>
+                    <p>AI picks up in under 1 second. Handles pricing questions, books appointments, transfers complex calls to you.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🚨</div>
+                    <h3>Recovers No-Shows</h3>
+                    <p>Texts within 1 hour of missed appointment. 70% rebook within 48 hours. Automatic.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>5-Minute Lead Response</h3>
+                    <p>Every inquiry gets a response in under 5 minutes. Books consultations while you're busy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💝</div>
+                    <h3>Reactivates Lapsed Clients</h3>
+                    <p>Automatically reaches out to clients who haven't visited in 90+ days with personalized offers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌙</div>
+                    <h3>Works While You Sleep</h3>
+                    <p>62% of inquiries come after hours. AI handles them all. Wake up to booked appointments.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>Full Analytics</h3>
+                    <p>See every call, conversion, and recovered dollar. Know exactly what your AI is doing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="integrations">
+        <div class="container">
+            <h2 class="section-title">Works With Your Existing Tools</h2>
+            <p style="color: #888;">MedSpa RevAI integrates with your current calendar and booking system</p>
+            <div class="integration-logos">
+                <div class="integration-logo">Google Calendar</div>
+                <div class="integration-logo">Calendly</div>
+                <div class="integration-logo">Acuity</div>
+                <div class="integration-logo">Boulevard</div>
+                <div class="integration-logo">Mangomint</div>
+                <div class="integration-logo">Zenoti</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <div class="price-card">
+            <h3>MedSpa RevAI Pro</h3>
+            <div class="price">$497<span>/month</span></div>
+            <div class="vs-price">vs. $3,500/mo for a human receptionist</div>
+            <ul class="price-features">
+                <li>AI phone answering 24/7</li>
+                <li>Unlimited calls & texts</li>
+                <li>No-show recovery</li>
+                <li>Lead response automation</li>
+                <li>Lapsed client reactivation</li>
+                <li>Calendar integration</li>
+                <li>Analytics dashboard</li>
+            </ul>
+            <a href="signup.html" class="price-cta">Start 14-Day Free Trial</a>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="phone-box">
+            <h2>Experience It Yourself</h2>
+            <p>Call our AI demo - no signup required</p>
+            <a href="tel:+18334251223" class="phone-number">(833) 425-1223</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MedSpa RevAI. All rights reserved.</p>
+    </footer>
+</body>
+</html>
