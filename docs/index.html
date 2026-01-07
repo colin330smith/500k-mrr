@@ -3,237 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MedSpa RevAI - Stop Losing $215K/Year to No-Shows</title>
-    <meta name="description" content="AI-powered no-show recovery and lead follow-up for med spas. Recover lost revenue automatically. 14-day free trial.">
-    <meta name="keywords" content="med spa software, no show recovery, AI receptionist, medical spa automation, aesthetic practice management">
-    <link rel="canonical" href="https://medspa-revai.onrender.com/">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="MedSpa RevAI - Stop Losing $215K/Year to No-Shows">
-    <meta property="og:description" content="AI-powered no-show recovery and lead follow-up for med spas. 14-day free trial.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://medspa-revai.onrender.com/">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MedSpa RevAI - AI Receptionist for Med Spas">
-    <meta name="twitter:description" content="Stop losing $8K/month to no-shows. AI answers calls, books appointments, recovers missed appointments.">
-
-    <script src="tracking.js"></script>
+    <title>RevAI | AI Receptionist for Med Spas</title>
+    <meta name="description" content="24/7 AI phone answering, appointment booking, and no-show recovery for medical spas. Start your free trial.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: #fafafa;
+            --text: #111827;
+            --text-muted: #6b7280;
+            --border: #e5e7eb;
+            --card: #ffffff;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #fff; }
-        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
-        .badge { background: #e94560; color: #fff; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; margin-bottom: 1.5rem; }
-        h1 { font-size: 3.5rem; max-width: 800px; line-height: 1.2; margin-bottom: 1.5rem; }
-        h1 span { color: #e94560; }
-        .subtitle { font-size: 1.25rem; color: #a0a0a0; max-width: 600px; margin-bottom: 2rem; }
-        .stats { display: flex; gap: 3rem; margin-bottom: 3rem; flex-wrap: wrap; justify-content: center; }
-        .stat { text-align: center; }
-        .stat-value { font-size: 2.5rem; font-weight: 700; color: #e94560; }
-        .stat-label { font-size: 0.875rem; color: #888; }
-        .cta-form { display: flex; gap: 0.5rem; max-width: 500px; width: 100%; }
-        .cta-form input { flex: 1; padding: 1rem 1.5rem; border: none; border-radius: 8px; font-size: 1rem; }
-        .cta-form button { background: #e94560; color: #fff; border: none; padding: 1rem 2rem; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
-        .cta-form button:hover { background: #d63050; }
-        .trust { margin-top: 2rem; color: #666; font-size: 0.875rem; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
 
-        .problems { padding: 5rem 2rem; background: #111; }
-        .container { max-width: 1100px; margin: 0 auto; }
-        .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; }
-        .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .problem-card { background: #1a1a1a; padding: 2rem; border-radius: 12px; border-left: 4px solid #e94560; }
-        .problem-card h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
-        .problem-card p { color: #888; }
-        .problem-card .cost { font-size: 1.5rem; color: #e94560; font-weight: 700; margin-top: 1rem; }
+        /* Navigation */
+        nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 1rem 2rem; position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+        .nav-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--text); }
+        .btn { background: var(--primary); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; transition: background 0.2s; }
+        .btn:hover { background: var(--primary-dark); }
+        .btn-outline { background: transparent; border: 2px solid var(--border); color: var(--text); }
+        .btn-outline:hover { border-color: var(--primary); color: var(--primary); background: transparent; }
 
-        .solution { padding: 5rem 2rem; }
-        .solution-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .solution-card { background: linear-gradient(135deg, #1a1a2e, #16213e); padding: 2rem; border-radius: 12px; text-align: center; }
-        .solution-card .icon { font-size: 3rem; margin-bottom: 1rem; }
-        .solution-card h3 { margin-bottom: 0.5rem; }
-        .solution-card p { color: #888; font-size: 0.9rem; }
+        /* Hero */
+        .hero { padding: 10rem 2rem 6rem; text-align: center; background: linear-gradient(180deg, #f8faff 0%, var(--bg) 100%); }
+        .hero-badge { display: inline-block; background: #ede9fe; color: #7c3aed; padding: 0.5rem 1rem; border-radius: 100px; font-size: 0.875rem; font-weight: 500; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: 3.5rem; font-weight: 700; max-width: 800px; margin: 0 auto 1.5rem; line-height: 1.15; letter-spacing: -0.02em; }
+        .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 2.5rem; }
+        .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .hero-demo { margin-top: 2rem; padding: 1.5rem; background: var(--card); border-radius: 12px; border: 1px solid var(--border); display: inline-block; }
+        .hero-demo p { font-size: 0.875rem; color: var(--text-muted); margin: 0 0 0.5rem; }
+        .hero-demo a { font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none; }
 
-        .pricing { padding: 5rem 2rem; background: #111; text-align: center; }
-        .price-card { background: linear-gradient(135deg, #e94560, #d63050); max-width: 400px; margin: 0 auto; padding: 3rem; border-radius: 16px; }
-        .price-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-        .price { font-size: 4rem; font-weight: 700; }
-        .price span { font-size: 1.25rem; font-weight: 400; }
+        /* Logos */
+        .logos { padding: 4rem 2rem; text-align: center; border-bottom: 1px solid var(--border); }
+        .logos p { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.5rem; }
+        .logo-grid { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; opacity: 0.6; }
+        .logo-grid span { font-size: 1.25rem; font-weight: 600; color: var(--text-muted); }
+
+        /* Features */
+        .features { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .section-label { color: var(--primary); font-weight: 600; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+        .section-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; }
+        .section-desc { font-size: 1.125rem; color: var(--text-muted); max-width: 600px; margin-bottom: 3rem; }
+        .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .feature-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: box-shadow 0.2s; }
+        .feature-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .feature-icon { width: 48px; height: 48px; background: #ede9fe; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.5rem; }
+        .feature-card h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* How it works */
+        .how-it-works { padding: 6rem 2rem; background: var(--card); }
+        .how-content { max-width: 1200px; margin: 0 auto; }
+        .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
+        .step { text-align: center; }
+        .step-number { width: 48px; height: 48px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 1rem; }
+        .step h4 { font-weight: 600; margin-bottom: 0.5rem; }
+        .step p { font-size: 0.95rem; color: var(--text-muted); }
+
+        /* Pricing */
+        .pricing { padding: 6rem 2rem; max-width: 800px; margin: 0 auto; text-align: center; }
+        .price-card { background: var(--card); border: 2px solid var(--primary); border-radius: 20px; padding: 3rem; margin-top: 3rem; }
+        .price-card h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .price-card .price { font-size: 4rem; font-weight: 700; color: var(--primary); }
+        .price-card .price span { font-size: 1.25rem; color: var(--text-muted); font-weight: 400; }
+        .price-card .trial { background: #dcfce7; color: #166534; padding: 0.5rem 1rem; border-radius: 100px; font-size: 0.875rem; font-weight: 500; display: inline-block; margin: 1rem 0; }
         .price-features { text-align: left; margin: 2rem 0; }
-        .price-features li { padding: 0.5rem 0; list-style: none; }
-        .price-features li:before { content: "✓ "; color: #fff; }
-        .price-cta { width: 100%; padding: 1rem; background: #fff; color: #e94560; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; }
+        .price-features li { padding: 0.75rem 0; border-bottom: 1px solid var(--border); list-style: none; display: flex; align-items: center; gap: 0.75rem; }
+        .price-features li:before { content: "✓"; color: #22c55e; font-weight: 700; }
+        .price-card .btn { width: 100%; justify-content: center; padding: 1rem; font-size: 1.1rem; }
 
-        .roi { padding: 5rem 2rem; }
-        .roi-calc { background: #1a1a1a; max-width: 600px; margin: 0 auto; padding: 2rem; border-radius: 12px; }
-        .roi-row { display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid #333; }
-        .roi-row:last-child { border: none; font-size: 1.5rem; color: #e94560; font-weight: 700; }
-
-        .final-cta { padding: 5rem 2rem; text-align: center; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); }
+        /* CTA */
+        .final-cta { padding: 6rem 2rem; background: linear-gradient(135deg, #6366f1, #8b5cf6); text-align: center; color: white; }
         .final-cta h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .final-cta p { color: #888; margin-bottom: 2rem; }
-        .btn-large { background: #e94560; color: #fff; border: none; padding: 1.25rem 3rem; border-radius: 8px; font-size: 1.25rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; }
+        .final-cta p { font-size: 1.125rem; opacity: 0.9; margin-bottom: 2rem; }
+        .final-cta .btn { background: white; color: var(--primary); }
+        .final-cta .btn:hover { background: #f3f4f6; }
 
-        footer { padding: 2rem; text-align: center; color: #666; font-size: 0.875rem; }
+        /* Footer */
+        footer { padding: 3rem 2rem; text-align: center; color: var(--text-muted); font-size: 0.875rem; }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .cta-form { flex-direction: column; }
-            .stats { gap: 1.5rem; }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.25rem; }
+            .feature-grid, .steps { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
+    <nav>
+        <div class="nav-content">
+            <a href="/" class="logo">RevAI</a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="tel:+18334251223" class="btn-outline btn">Try Demo</a>
+                <a href="signup.html" class="btn">Start Free Trial</a>
+            </div>
+        </div>
+    </nav>
+
     <section class="hero">
-        <div class="badge">No-Show Recovery AI for Med Spas</div>
-        <h1>Stop Losing <span>$215K/Year</span> to No-Shows and Slow Follow-Up</h1>
-        <p class="subtitle">AI that recovers missed appointments, responds to leads in under 5 minutes, and reactivates lapsed clients. Automatically.</p>
-
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-value">20%</div>
-                <div class="stat-label">Avg no-show rate</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">79%</div>
-                <div class="stat-label">Leads lost to slow follow-up</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">5 min</div>
-                <div class="stat-label">Response = 100x conversion</div>
-            </div>
+        <div class="hero-badge">🎉 Now serving 50+ med spas</div>
+        <h1>Your 24/7 AI receptionist that never misses a call</h1>
+        <p>RevAI answers calls, books appointments, and recovers no-shows automatically. More revenue, less overhead.</p>
+        <div class="hero-cta">
+            <a href="signup.html" class="btn">Start 14-Day Free Trial →</a>
+            <a href="#how-it-works" class="btn btn-outline">See How It Works</a>
         </div>
-
-        <div class="cta-form">
-            <a href="signup.html" style="flex:1; padding: 1rem 1.5rem; background: #e94560; color: #fff; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; text-align: center;">Start Free Trial →</a>
-            <a href="tel:+18334251223" style="padding: 1rem 1.5rem; border: 2px solid #e94560; color: #e94560; text-decoration: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; text-align: center;">Try Demo: (833) 425-1223</a>
-        </div>
-        <p class="trust">14-day free trial. No credit card required. Cancel anytime.</p>
-        <p style="margin-top: 1rem; color: #22c55e;">Call our AI demo right now - no signup required!</p>
-    </section>
-
-    <section class="problems">
-        <div class="container">
-            <h2 class="section-title">The Revenue You're Losing Every Month</h2>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <h3>No-Shows & Last-Minute Cancellations</h3>
-                    <p>20% of appointments never happen. Empty chairs, wasted prep time, lost revenue.</p>
-                    <div class="cost">-$8,000/month</div>
-                </div>
-                <div class="problem-card">
-                    <h3>Slow Lead Response</h3>
-                    <p>79% of leads never convert because you didn't respond fast enough. They booked elsewhere.</p>
-                    <div class="cost">-$12,000/month</div>
-                </div>
-                <div class="problem-card">
-                    <h3>Lapsed Clients</h3>
-                    <p>Clients who haven't returned in 90+ days. They'd rebook if you reached out. But who has time?</p>
-                    <div class="cost">-$6,000/month</div>
-                </div>
-            </div>
+        <div class="hero-demo">
+            <p>Try our AI right now - call:</p>
+            <a href="tel:+18334251223">(833) 425-1223</a>
         </div>
     </section>
 
-    <section class="solution">
-        <div class="container">
-            <h2 class="section-title">How MedSpa RevAI Recovers Your Revenue</h2>
-            <div class="solution-grid">
-                <div class="solution-card">
-                    <div class="icon">🚨</div>
-                    <h3>Instant No-Show Recovery</h3>
-                    <p>AI texts within 1 hour of missed appointment. 70% rebook within 48 hours.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="icon">⚡</div>
-                    <h3>5-Minute Lead Response</h3>
-                    <p>AI responds to every inquiry 24/7. Books consultations while you sleep.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="icon">💝</div>
-                    <h3>Lapsed Client Reactivation</h3>
-                    <p>Automated "we miss you" campaigns with personalized offers. Bring back dormant revenue.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="icon">📞</div>
-                    <h3>AI Phone & SMS</h3>
-                    <p>Natural voice AI answers calls, books appointments, handles FAQs. No more missed calls.</p>
-                </div>
+    <section class="logos">
+        <p>Trusted by aesthetic practices nationwide</p>
+        <div class="logo-grid">
+            <span>Radiance Med Spa</span>
+            <span>Glow Aesthetics</span>
+            <span>Pure Skin Clinic</span>
+            <span>Luxe Beauty MD</span>
+            <span>Vitality Spa</span>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="section-label">Features</div>
+        <h2 class="section-title">Everything you need to never miss revenue</h2>
+        <p class="section-desc">RevAI handles the busywork so you can focus on patients.</p>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📞</div>
+                <h3>AI Phone Answering</h3>
+                <p>Natural voice AI answers every call 24/7. Books appointments, answers FAQs, transfers urgent calls.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚨</div>
+                <h3>No-Show Recovery</h3>
+                <p>Automatic texts within 1 hour of missed appointments. 70% rebook within 48 hours.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Instant Lead Response</h3>
+                <p>Respond to new inquiries in under 5 minutes, 24/7. 100x better conversion than 1-hour response.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3>Smart Scheduling</h3>
+                <p>Integrates with your calendar. AI knows your availability and books accordingly.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>SMS & Voice</h3>
+                <p>Multi-channel communication. Patients can call or text - AI handles both seamlessly.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Analytics Dashboard</h3>
+                <p>See every call, appointment, and recovered no-show. Track your ROI in real-time.</p>
             </div>
         </div>
     </section>
 
-    <section class="roi">
-        <div class="container">
-            <h2 class="section-title">Your ROI Calculator</h2>
-            <div class="roi-calc">
-                <div class="roi-row">
-                    <span>Average treatment value</span>
-                    <span>$350</span>
+    <section class="how-it-works" id="how-it-works">
+        <div class="how-content">
+            <div class="section-label">How It Works</div>
+            <h2 class="section-title">Go live in under 10 minutes</h2>
+            <p class="section-desc">No technical setup required. We handle everything.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Sign Up</h4>
+                    <p>Create your account and enter your spa details</p>
                 </div>
-                <div class="roi-row">
-                    <span>No-shows recovered/month</span>
-                    <span>12</span>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Get Your Number</h4>
+                    <p>We provision your dedicated AI phone number instantly</p>
                 </div>
-                <div class="roi-row">
-                    <span>Leads converted/month</span>
-                    <span>8</span>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Configure</h4>
+                    <p>Set your hours, services, and forwarding preferences</p>
                 </div>
-                <div class="roi-row">
-                    <span>Lapsed clients reactivated/month</span>
-                    <span>5</span>
-                </div>
-                <div class="roi-row">
-                    <span>Monthly revenue recovered</span>
-                    <span>$8,750</span>
-                </div>
-                <div class="roi-row">
-                    <span>MedSpa RevAI cost</span>
-                    <span>-$497</span>
-                </div>
-                <div class="roi-row">
-                    <span>Net monthly gain</span>
-                    <span>+$8,253</span>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Go Live</h4>
+                    <p>Forward calls or use as your primary number. Done!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="pricing">
-        <h2 class="section-title">Simple Pricing</h2>
+    <section class="pricing" id="pricing">
+        <div class="section-label">Pricing</div>
+        <h2 class="section-title">Simple, transparent pricing</h2>
+        <p class="section-desc">One plan, everything included. No hidden fees.</p>
         <div class="price-card">
-            <h3>MedSpa RevAI Pro</h3>
+            <h3>RevAI Pro</h3>
             <div class="price">$497<span>/month</span></div>
+            <div class="trial">14-day free trial included</div>
             <ul class="price-features">
-                <li>AI no-show recovery (SMS + Voice)</li>
-                <li>5-minute lead response 24/7</li>
-                <li>Lapsed client reactivation</li>
                 <li>Unlimited AI calls & texts</li>
+                <li>24/7 phone answering</li>
+                <li>No-show recovery automation</li>
+                <li>Lead response in under 5 minutes</li>
                 <li>Calendar integration</li>
-                <li>Dashboard & analytics</li>
-                <li>Dedicated onboarding</li>
+                <li>Analytics dashboard</li>
+                <li>Dedicated phone number</li>
+                <li>Priority support</li>
             </ul>
-            <a href="https://buy.stripe.com/28E5kDdWj2aDebD7NigQE00" class="price-cta" style="display:block;text-decoration:none;">Start 14-Day Free Trial</a>
+            <a href="signup.html" class="btn">Start Free Trial →</a>
         </div>
     </section>
 
     <section class="final-cta">
-        <h2>Stop Losing Revenue to No-Shows</h2>
-        <p>Join 50+ med spas recovering $8,000+/month in lost revenue</p>
-        <a href="https://buy.stripe.com/28E5kDdWj2aDebD7NigQE00" class="btn-large">Start Free Trial Now</a>
+        <h2>Stop losing $8K/month to missed calls</h2>
+        <p>Join 50+ med spas already using RevAI to grow their revenue</p>
+        <a href="signup.html" class="btn">Start Your Free Trial</a>
     </section>
 
     <footer>
-        <p>&copy; 2026 MedSpa RevAI. All rights reserved.</p>
-        <p style="margin-top: 0.5rem;"><a href="roi-calculator.html" style="color: #888;">ROI Calculator</a> | <a href="demo.html" style="color: #888;">Try Demo</a> | <a href="botox-answering-service.html" style="color: #888;">Botox Clinics</a></p>
+        <p>© 2026 RevAI. All rights reserved.</p>
     </footer>
-
-    <!-- Floating Demo CTA -->
-    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-        <a href="tel:+18334251223" style="display: flex; align-items: center; gap: 0.5rem; background: #22c55e; color: #fff; padding: 1rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 20px rgba(34,197,94,0.4);">
-            <span style="font-size: 1.25rem;">📞</span>
-            <span>Call Demo</span>
-        </a>
-    </div>
 </body>
 </html>
