@@ -1,0 +1,137 @@
+[
+  {
+    "lead": "BeyondSkin MedSpa",
+    "callId": "019b95bd-e933-744c-9090-900c40bd4f99",
+    "status": "initiated"
+  },
+  {
+    "lead": "Medspa of Los Angeles",
+    "callId": "019b95be-007e-7aa0-b593-acd9070e1ecb",
+    "status": "initiated"
+  },
+  {
+    "lead": "Fix Me Up Medical Spa",
+    "callId": "019b95be-189e-7bb9-97ac-8834b349b6b5",
+    "status": "initiated"
+  },
+  {
+    "lead": "NassifMD MedSpa",
+    "callId": "019b95be-3d09-7887-a094-87ebf9122beb",
+    "status": "initiated"
+  },
+  {
+    "lead": "me.losangeles aesthetics",
+    "callId": "019b95be-52dd-711d-9b21-d6ded8ab658a",
+    "status": "initiated"
+  },
+  {
+    "lead": "MedBeautyLA",
+    "callId": "019b95be-68fc-744c-9090-d5b46a2c57fb",
+    "status": "initiated"
+  },
+  {
+    "lead": "Volure MedSpa",
+    "callId": "019b95be-7f49-7ee5-975b-32b358e96c45",
+    "status": "initiated"
+  },
+  {
+    "lead": "Lux MedSpa Brickell",
+    "callId": "019b95be-9524-788c-8d46-63e2aa544d02",
+    "status": "initiated"
+  },
+  {
+    "lead": "Med Aesthetics Miami",
+    "callId": "019b95be-abca-7ee5-975b-f0b3080cbcd5",
+    "status": "initiated"
+  },
+  {
+    "lead": "Miami Medical Spa",
+    "callId": "019b95be-c1cc-7cc5-90ee-93b4518c30a2",
+    "status": "initiated"
+  },
+  {
+    "lead": "Amis MedSpa",
+    "callId": "019b95be-d7cf-7220-9c7b-cd4aa57aec4b",
+    "status": "initiated"
+  },
+  {
+    "lead": "Perfect B Aesthetic Medicine",
+    "callId": "019b95be-edf6-7ccd-9023-4da5029446f8",
+    "status": "initiated"
+  },
+  {
+    "lead": "Skin Damsel Aesthetics",
+    "callId": "019b95bf-0442-744c-9093-9db22c6207bb",
+    "status": "initiated"
+  },
+  {
+    "lead": "D'Allure Medspa",
+    "error": {
+      "statusCode": 400,
+      "message": "Over Concurrency Limit.",
+      "error": "Bad Request",
+      "subscriptionLimits": {
+        "concurrencyBlocked": true,
+        "concurrencyLimit": 10,
+        "remainingConcurrentCalls": -1
+      }
+    },
+    "status": "failed"
+  },
+  {
+    "lead": "Medicos Family Clinic Med Spa",
+    "error": {
+      "statusCode": 400,
+      "message": "Over Concurrency Limit.",
+      "error": "Bad Request",
+      "subscriptionLimits": {
+        "concurrencyBlocked": true,
+        "concurrencyLimit": 10,
+        "remainingConcurrentCalls": -1
+      }
+    },
+    "status": "failed"
+  },
+  {
+    "lead": "Fabutopia Medspa & Aesthetics",
+    "error": {
+      "statusCode": 400,
+      "message": "Over Concurrency Limit.",
+      "error": "Bad Request",
+      "subscriptionLimits": {
+        "concurrencyBlocked": true,
+        "concurrencyLimit": 10,
+        "remainingConcurrentCalls": -1
+      }
+    },
+    "status": "failed"
+  },
+  {
+    "lead": "Medspa of Dallas",
+    "error": {
+      "statusCode": 400,
+      "message": "Over Concurrency Limit.",
+      "error": "Bad Request",
+      "subscriptionLimits": {
+        "concurrencyBlocked": true,
+        "concurrencyLimit": 10,
+        "remainingConcurrentCalls": -1
+      }
+    },
+    "status": "failed"
+  },
+  {
+    "lead": "It's A Secret Med Spa",
+    "error": {
+      "statusCode": 400,
+      "message": "Over Concurrency Limit.",
+      "error": "Bad Request",
+      "subscriptionLimits": {
+        "concurrencyBlocked": true,
+        "concurrencyLimit": 10,
+        "remainingConcurrentCalls": -1
+      }
+    },
+    "status": "failed"
+  }
+]

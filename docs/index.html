@@ -114,7 +114,7 @@
     </nav>
 
     <section class="hero">
-        <div class="hero-badge">🎉 Now serving 50+ med spas</div>
+        <div class="hero-badge">🚀 AI-Powered Revenue Recovery</div>
         <h1>Your 24/7 AI receptionist that never misses a call</h1>
         <p>RevAI answers calls, books appointments, and recovers no-shows automatically. More revenue, less overhead.</p>
         <div class="hero-cta">
@@ -128,13 +128,13 @@
     </section>
 
     <section class="logos">
-        <p>Trusted by aesthetic practices nationwide</p>
+        <p>Built for medical spas, dental practices, and aesthetic clinics</p>
         <div class="logo-grid">
-            <span>Radiance Med Spa</span>
-            <span>Glow Aesthetics</span>
-            <span>Pure Skin Clinic</span>
-            <span>Luxe Beauty MD</span>
-            <span>Vitality Spa</span>
+            <span>Med Spas</span>
+            <span>Dental Clinics</span>
+            <span>Aesthetic Practices</span>
+            <span>Wellness Centers</span>
+            <span>Beauty Clinics</span>
         </div>
     </section>
 
@@ -230,12 +230,46 @@
 
     <section class="final-cta">
         <h2>Stop losing $8K/month to missed calls</h2>
-        <p>Join 50+ med spas already using RevAI to grow their revenue</p>
+        <p>Start your 14-day free trial today. No credit card required.</p>
         <a href="signup.html" class="btn">Start Your Free Trial</a>
     </section>
 
     <footer>
         <p>© 2026 RevAI. All rights reserved.</p>
     </footer>
+
+    <!-- Analytics -->
+    <script>
+        // Track page views and interactions
+        (function() {
+            const data = {
+                page: window.location.pathname,
+                referrer: document.referrer,
+                timestamp: new Date().toISOString(),
+                userAgent: navigator.userAgent
+            };
+
+            // Store locally for now
+            const views = JSON.parse(localStorage.getItem('revai_views') || '[]');
+            views.push(data);
+            localStorage.setItem('revai_views', JSON.stringify(views));
+
+            // Track clicks on CTAs
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const clicks = JSON.parse(localStorage.getItem('revai_clicks') || '[]');
+                    clicks.push({
+                        text: this.textContent,
+                        href: this.href,
+                        timestamp: new Date().toISOString()
+                    });
+                    localStorage.setItem('revai_clicks', JSON.stringify(clicks));
+                });
+            });
+
+            // Log to console for monitoring
+            console.log('RevAI Analytics: Page view tracked', data);
+        })();
+    </script>
 </body>
 </html>
